@@ -1,0 +1,89 @@
+# 문서·경로 안내용 공통 설정입니다. 기존 게임 도구를 자동 제어하지 않습니다.
+schema_version: 2
+project:
+  name: "한글패치"
+  mode: "MULTI_GAME_WORKSPACE"
+  documentation_version: "1.0"
+  updated_at: "2026-11-17"
+  status_document: "PROJECT_STATUS.md"
+  playbook: "docs/KOREAN_PATCH_PLAYBOOK.md"
+  implementation_backlog: "docs/PROCESS_IMPROVEMENT_BACKLOG.md"
+  claude_code_setup: "docs/CLAUDE_CODE_SETUP.md"
+  workspace_root: "D:/kpatch"
+  previous_workspace: "C:/Users/PC/Documents/ChatGPT/한글패치"
+
+games:
+  AGROMATIC_DEMO:
+    readme: "tasks/AGROMATIC_DEMO/README.md"
+  ALASKA_GOLD_FEVER:
+    readme: "tasks/ALASKA_GOLD_FEVER/README.md"
+  ALCHEMORTIS_DEMO:
+    readme: "tasks/ALCHEMORTIS_DEMO/README.md"
+  BOREWORKS_DEMO:
+    readme: "tasks/BOREWORKS_DEMO/README.md"
+  COBALT_MINER:
+    readme: "tasks/COBALT_MINER/README.md"
+  COMBOLANDS:
+    readme: "tasks/COMBOLANDS/README.md"
+  EPIC_IDLENTURE_DEMO:
+    readme: "tasks/EPIC_IDLENTURE_DEMO/README.md"
+  HOW_EMPIRES_WORK:
+    readme: "tasks/HOW_EMPIRES_WORK/README.md"
+  KINGDOM_INC_DEMO:
+    readme: "tasks/KINGDOM_INC_DEMO/README.md"
+  MARCH_AND_CONQUER_DEMO:
+    readme: "tasks/MARCH_AND_CONQUER_DEMO/README.md"
+  MR_MAGEBOY_DEMO:
+    readme: "tasks/MR_MAGEBOY_DEMO/README.md"
+  PIBCREMENTAL_DEMO:
+    readme: "tasks/PIBCREMENTAL_DEMO/README.md"
+  PROFITS2167:
+    readme: "tasks/PROFITS2167/README.md"
+  SEVENDAYS_VANILLAPLUS:
+    readme: "tasks/SEVENDAYS_VANILLAPLUS/README.md"
+  SILKY_RAILS:
+    readme: "tasks/SILKY_RAILS/README.md"
+  SOULASH_2:
+    readme: "tasks/SOULASH_2/README.md"
+  SPELLBOUND_SHELVED:
+    readme: "tasks/SPELLBOUND_SHELVED/README.md"
+  SUPERREAP_DEMO:
+    readme: "tasks/SUPERREAP_DEMO/README.md"
+  TFC2:
+    readme: "tasks/TFC2/README.md"
+  THE_HORDE_OF_GORAK:
+    readme: "tasks/THE_HORDE_OF_GORAK/README.md"
+  THE_LOOPLER:
+    readme: "tasks/THE_LOOPLER/README.md"
+
+templates:
+  task_spec: "tasks/TASK_SPEC_TEMPLATE.md"
+  game_config: "templates/GAME_CONFIG_TEMPLATE.yaml"
+  qa_ledger: "templates/QA_LEDGER_TEMPLATE.yaml"
+  result_report: "templates/RESULT_REPORT_TEMPLATE.md"
+
+paths:
+  source_original: "source_original"
+  extracted_private: "extracted_private"
+  working_private: "working_private"
+  build_candidate: "build_candidate"
+  validation: "validation"
+  release_output: "release_output"
+
+policy:
+  source_original_read_only: true
+  unknown_default: "UNKNOWN"
+  require_position_based_validation: true
+  require_graphical_qa: true
+  require_save_isolation: true
+  require_evidence_hash_binding: true
+  require_final_zip_installer_qa: true
+  require_failure_recovery: true
+  # 설치·공개의 허용 범위는 현재 사용자 요청과 작업 명세에 기록합니다.
+  execution_authorization_source: "CURRENT_USER_REQUEST_AND_TASK_SPEC"
+
+implementation:
+  common_runner: "NOT_IMPLEMENTED"
+  unified_toolchain_lock: "NOT_IMPLEMENTED"
+  # 게임별 실행 환경 고정은 양식을 채우고 별도로 검증합니다.
+  per_game_config_migration: "NOT_RUN"

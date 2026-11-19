@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "project": "PROFITS2167 Korean Patch",
+  "handoff_date": "2026-08-29",
+  "game": {
+    "title": "PROFITS2167",
+    "version": "V0.23.8.12",
+    "unity_version": "2022.3.62f3",
+    "build_guid": "ef70fc61842a4a7e88293bd7daf7bd9f",
+    "il2cpp_metadata_version": "31.1"
+  },
+  "patch": {
+    "version": "0.5.1",
+    "patch_id": "PROFITS2167-KO-20260829-051",
+    "archive": "release_output/PROFITS2167_Korean_Patch_v0.5.1.zip",
+    "sha256": "0326e80cf6eaf4d1bc96e0921392750e991dd2e7fe6d15169e9216cd3611e244",
+    "format": "xdelta-only; no complete original game assets"
+  },
+  "status": {
+    "static_text_audit": "PASS",
+    "runtime_full_playthrough_visual_qa": "NOT_RUN",
+    "scope_statement": "Text-layer static exhaustive localization. Embedded English pixels in tutorial images/videos, logos, creator names, versions and station codes are intentionally retained."
+  },
+  "metrics": {
+    "screen_text_asset_rows_audited": 1638,
+    "il2cpp_visible_string_translations": 260,
+    "metadata_strings_parsed": 16414,
+    "cpp2il_methods_mapped": 110366,
+    "upgrade_tag_enum_fields_localized": 8,
+    "intended_translation_values_missing_after_reextract": 0,
+    "mapped_source_strings_remaining_after_reextract": 0,
+    "intentional_unique_static_english_residuals": 19
+  },
+  "paths": {
+    "final_report": "docs/PROFITS2167_최종_보고서.md",
+    "operator_handoff": "docs/PROFITS2167_인수인계.md",
+    "workflow_rules": "AGENTS.md",
+    "reproduction_tools": "tasks/PROFITS2167/tools",
+    "release_metadata": "tasks/PROFITS2167/release_metadata",
+    "translation_data_private": "working_private/PROFITS2167/translation_data",
+    "audit_data_private": "extracted_private/PROFITS2167/audit",
+    "validation_data_private": "extracted_private/PROFITS2167/validation",
+    "source_prompt": "templates/PROFITS2167/GAME_KOREAN_PATCH_V2_CODEX_DEVELOPER_PROMPT_KO.md"
+  },
+  "release_gates": [
+    "Classify every candidate as VISIBLE_TRANSLATE, VISIBLE_KEEP, INTERNAL, MEDIA, or UNKNOWN.",
+    "Release only when UNKNOWN equals zero.",
+    "Prove Korean glyph coverage for every runtime font.",
+    "Re-extract modified assets and prove intended values missing equals zero and mapped sources remaining equals zero.",
+    "Keep static audit claims separate from runtime visual QA claims.",
+    "Reject unknown game builds by hash and never distribute full original game assets."
+  ],
+  "copyright_boundary": {
+    "git_ignored": [
+      "source_original",
+      "backups",
+      "build_candidate",
+      "extracted_private",
+      "working_private",
+      "quarantine",
+      "viewer_output"
+    ],
+    "forbidden_in_public_release": [
+      "complete .assets files",
+      "complete global-metadata.dat",
+      "game executables and DLLs",
+      "developer media copied from the game"
+    ]
+  }
+}

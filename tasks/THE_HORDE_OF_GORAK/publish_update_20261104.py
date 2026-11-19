@@ -1,0 +1,124 @@
+"""개인 경로·원시 게임 자료를 제외한 공개 배포 안내를 생성합니다."""
+import json
+import shutil
+from pathlib import Path
+from update_20261104 import ROOT, WORK, sha, save
+
+REPO = WORK.parent / 'github_publish_20261102/checkout'
+SCRATCH = WORK.parent / 'package_1.0.1_r1'
+
+
+def main():
+    package = json.loads((SCRATCH / 'package.json').read_text(encoding='utf-8'))
+    tests = json.loads((SCRATCH / 'installer_tests.json').read_text(encoding='utf-8'))
+    assert tests['status'] == 'PASS' and tests['zip_sha256'] == package['zip_sha256']
+    archive = Path(package['archive'])
+    assert sha(archive) == package['zip_sha256']
+    expected = {'previous_public_release_update', 'same_files_different_build_number', 'previous_game_build_rejected',
+                'forced_process_stop', 'resume_after_forced_stop', 'rollback_locked_replacement'}
+    assert expected <= {r['id'] for r in tests['tests'] if r['status'] == 'PASS'}
+    passed = sum(r['status'] == 'PASS' for r in tests['tests'])
+    info = {'patch_version': '1.0.1', 'package_revision': 'r1', 'steam_build': '26365992', 'game_version': 'v1.1.04',
+            'zip_sha256': package['zip_sha256'], 'zip_bytes': archive.stat().st_size,
+            'static_checks': {'status': 'PASS', 'count': 12080, 'unexpected_changes': 0},
+            'delta_roundtrips': {'status': 'PASS', 'changed_files': 12, 'directions': 24},
+            'package_allowlist': {'status': 'PASS', 'files': len(package['allowed_files'])},
+            'installer': {'status': 'PASS', 'passed': passed, 'tests': [{'id': r['id'], 'status': r['status']} for r in tests['tests']]},
+            'graphics_qa': {'status': 'NOT_RUN', 'scope': '전체 검수는 미완료. 메뉴·설정·도입부·지도·전투·저장/이어하기·종료 확인. 신규 상점 실화면·엔딩·전체 분기·설치본 추가 실행 미확인'},
+            'native_diagnostics': '기존 엔진의 일부 JSON 오류 등 영문 진단 문구 잔존. 전수 분류 미완료'}
+    save(REPO / 'releases/v1.0.1-verification.json', info)
+    shutil.copy2(archive, REPO / 'downloads' / archive.name)
+    checksums = ''.join(f'{sha(p)}  downloads/{p.name}\n' for p in sorted((REPO / 'downloads').glob('*.zip')))
+    (REPO / 'SHA256SUMS.txt').write_text(checksums, encoding='utf-8')
+    release_text = f'''# 한국어 패치 1.0.1 — 게임 v1.1.04 대응
+
+2026-11-04 · Windows Steam 앱 4911050 · 기준 빌드 26365992
+
+게임 업데이트로 THOG.dat의 내용과 객체 위치가 바뀌어 기존 패치가 거부되던 문제에 대응했습니다. 이전 번역을 새 위치에 연결하고 오우거 상점·금화 등 신규 문구 15종을 추가했습니다.
+
+## 다운로드와 설치
+
+[패치 1.0.1 ZIP](../downloads/{archive.name})을 모두 푼 뒤 게임을 종료하고 `Install.cmd`에서 게임 폴더를 선택하세요. v1.1.04 원본과 이전 한글패치 실행 모듈이 섞여 남은 업데이트 상태 모두 지원합니다. v1.1.03에는 먼저 Steam 업데이트를 적용하세요.
+
+제거는 이 버전의 `Remove.cmd`를 사용합니다. 새 원본 백업은 `build_26365992`에, 기존 백업은 `build_26336311`에 별도로 보존합니다. 설치가 중단되면 같은 설치기를 다시 실행하세요.
+
+## 변경과 검증
+
+- 본문·메뉴 604종 875위치, 기존 실행 모듈 표시 문구 176필드, 이미지 문구 4곳과 한글 글꼴을 반영했습니다.
+- 새 이미지 71개를 검토했습니다. 추가 영문 픽셀 문구는 없으며 상점 그림의 숫자 10은 유지합니다.
+- 번역 위치·제어 정보·글꼴·픽셀·게임 구조 12,080개 검사에서 예상 밖 변경은 0건입니다.
+- 변경 파일 12개의 정방향·역방향 복원 24개와 ZIP {len(package['allowed_files'])}파일의 명시적 허용 목록을 확인했습니다.
+- 최종 ZIP에서 꺼낸 설치기로 {passed}개 판정이 통과했습니다. 이전 공개 패치가 남은 갱신 상태, 중복·부분 설치, 제거, 지원하지 않는 파일 거부, 파일 잠금·기록 실패·강제 중단 후 복구를 포함합니다.
+- 사용자 저장을 분리한 실제 후보에서 메뉴·설정·도입부·지도·전투·저장 후 이어하기·정상 종료를 확인했습니다. 기록한 사용자 저장·설정은 검사 전후 같았습니다.
+
+[설치기 시험 요약](v1.0.1-verification.json)에서 항목별 결과를 확인할 수 있습니다. ZIP의 `REVIEW_STATUS.json`은 ZIP 생성 시점의 기록이므로 G7이 NOT_RUN입니다. 그 ZIP을 이후 시험한 결과가 위 요약입니다.
+
+## 확인하지 않은 부분
+
+사용자의 화면 검수 종료 요청에 따라 신규 상점의 실제 화면·구매, 엔딩·전체 분기·모든 문구의 화면 표시·최종 설치본 추가 실행은 확인하지 않았습니다. 기존 엔진의 일부 JSON 오류 등 영문 진단 문구도 남아 있습니다. 전체 검수 통과판은 아닙니다. 검수용 저장·장면 이동·외부 연동 차단은 배포본에 포함하지 않습니다.
+
+## 다음 업데이트에서도 사용할 수 있나요?
+
+설치기는 Steam 빌드 번호만 비교하지 않고 게임 파일의 내용 지문을 검사합니다. **번호만 바뀌고 검사 대상 파일이 같으면 적용할 수 있습니다.** 이번에는 게임 자료 자체가 달라져 새 패치가 필요했습니다.
+
+앞으로 새 문구·자료 구조·글꼴·실행 코드가 바뀌면 다시 대응해야 합니다. 모든 미래 업데이트의 호환성을 보장하거나 알 수 없는 파일에 강제 적용하지 않습니다. 원문과 객체 정보를 연결해 이전 번역을 재사용하도록 제작 도구를 개선했지만, 이는 새 버전 대응을 돕는 기능이며 무검증 자동 호환 기능은 아닙니다.
+
+ZIP SHA-256: `{package['zip_sha256']}`
+'''
+    (REPO / 'releases/v1.0.1.md').write_text(release_text, encoding='utf-8')
+    readme = f'''# The Horde of Gorak 한국어 패치 1.0.1
+
+![The Horde of Gorak](images/01_title.jpg)
+
+[**한글패치 ZIP 다운로드**](https://github.com/KIMDONGWHEE99/the-horde-of-gorak-korean-patch/raw/refs/heads/main/downloads/{archive.name}) · [**게임 소개·리뷰**](INTRODUCTION.md) · [업데이트·검증 안내](releases/v1.0.1.md)
+
+오크 마을과 군대를 키워 인간의 성을 공략하는 성장형 전략 게임의 비공식 한국어 패치입니다. [Steam 공식 상점](https://store.steampowered.com/app/4911050/The_Horde_of_Gorak/)
+
+## 지원 버전
+
+- **Windows Steam 앱 4911050 / 빌드 26365992 / 게임 v1.1.04**에 대응합니다.
+- 패치 **1.0.1 · r1**: 업데이트로 막힌 이전 패치를 갱신하고 오우거 상점·금화 등 신규 문구를 추가했습니다.
+- 일부 검수를 생략한 버전입니다. 신규 상점 실화면·엔딩·전체 분기는 미확인이며 **전체 검수 통과판은 아닙니다**.
+
+## 설치·제거
+
+1. 게임을 종료하고 위의 **한글패치 ZIP 다운로드**를 누릅니다.
+2. ZIP 전체를 새 폴더에 풉니다.
+3. `Install.cmd`에서 `THOG.exe`가 있는 게임 폴더를 선택합니다.
+4. 설치가 끝나면 Steam에서 평소처럼 실행합니다.
+
+이미 v1.1.04로 업데이트했고 예전 패치 일부가 남아 있어도 그대로 설치할 수 있습니다. v1.1.03이면 게임부터 업데이트하세요. 제거는 **같은 패키지의 `Remove.cmd`**를 사용합니다. 설치 완료 메시지의 원본 백업을 보관하고, 설치 중단 후에는 같은 설치기를 다시 실행해 복구하세요. 설치·제거기는 사용자 저장을 변경하지 않습니다.
+
+저장소의 **Code → Download ZIP**에는 문서와 구버전까지 포함됩니다. 설치하려면 맨 위의 패치 ZIP을 사용하세요.
+
+## 한글화와 확인 범위
+
+- 본문·메뉴 604종 **875위치**, 실행 모듈 표시 문구 **176필드**, 이미지 문구 **4곳**과 한글 글꼴을 반영했습니다.
+- 새 버전의 번역 위치·글꼴·픽셀·게임 구조 **12,080개 검사**, 변경 파일 12개 정역 복원, 최종 ZIP 설치·복구 **{passed}개 판정**이 통과했습니다.
+- 실제 후보의 메뉴·설정·도입부·지도·전투·저장/이어하기·종료를 확인했습니다. 신규 상점 실화면·엔딩·전체 분기·최종 설치본 추가 실행은 미확인입니다.
+- 게임 제목·제작진·브랜드 로고는 유지합니다. 일부 JSON 오류 등 영문 진단 문구가 남아 있습니다.
+
+원본 게임·개인 저장·검수용 변경을 포함하지 않는 차이 패치입니다. 도구·글꼴 라이선스는 ZIP의 `licenses` 폴더에 있습니다. [자세한 확인 범위](releases/v1.0.1.md) · [설치기 시험 요약](releases/v1.0.1-verification.json)
+
+## 게임이 다시 업데이트되면?
+
+**빌드 번호만 바뀌고 검사 대상 파일이 같으면 적용할 수 있습니다.** 파일 내용이 달라지면 새 패치가 필요할 수 있습니다. 설치기는 내용이 다른 파일을 강제로 덮어쓰지 않으며 모든 미래 버전의 호환성을 보장하지 않습니다.
+
+## 소개글과 이전 버전
+
+[게임 소개·리뷰](INTRODUCTION.md)는 공식 이미지 6장과 게임 특징, 짧은 리뷰를 담았습니다. `미리보기.html`, `카페_복사용.html`, `카페_본문.txt`도 제공합니다. 소개 이미지는 공식 영문 홍보 화면이며 한글패치 적용 화면이 아닙니다.
+
+[이전 패치 1.0.0 안내](releases/v1.0.0.md)는 빌드 26336311 / 게임 v1.1.03용입니다.
+
+ZIP SHA-256: `{package['zip_sha256']}`
+'''
+    (REPO / 'README.md').write_text(readme, encoding='utf-8')
+    # 공개 요약만 validation에 저장하며 원시 로그와 저장은 비공개 영역에 남깁니다.
+    public_dir = ROOT / 'validation/THE_HORDE_OF_GORAK/ko_1.0.1'
+    save(public_dir / 'PUBLIC_VERIFICATION.json', info)
+    save(WORK / 'publication_manifest.json', {'files': [{'path': p.relative_to(REPO).as_posix(), 'sha256': sha(p), 'size': p.stat().st_size} for p in sorted(REPO.rglob('*')) if p.is_file() and '.git' not in p.relative_to(REPO).parts]})
+    print(json.dumps({'files': len(json.loads((WORK/'publication_manifest.json').read_text(encoding='utf-8'))['files']), 'installer_passed': passed, 'zip_sha256': package['zip_sha256']}, ensure_ascii=False))
+
+
+if __name__ == '__main__':
+    main()

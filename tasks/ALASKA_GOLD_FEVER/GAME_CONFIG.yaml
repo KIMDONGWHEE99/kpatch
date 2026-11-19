@@ -1,0 +1,29 @@
+schema_version: 1
+game:
+  game_id: ALASKA_GOLD_FEVER
+  title: Alaska Gold Fever
+  platform: Windows Steam
+  store_app_id: 1674200
+  game_build: '25782395'
+  engine: Unity
+  engine_version: 6000.0.62f1
+  scripting_backend: IL2CPP
+  asset_loading_system: Addressables
+  asset_loading_version: 2.7.4
+baseline:
+  baseline_id: '25782395'
+  source_root: source_original/ALASKA_GOLD_FEVER/25782395/game
+  files_manifest: extracted_private/ALASKA_GOLD_FEVER/25782395/baseline_manifest.json
+  manifest_sha256: 88a8f7fb7cb569d525e4fefea6442f16cd77166387dc2bc4439a142fac7f79ca
+  file_count: 399
+  total_bytes: 11325688464
+translation:
+  canonical_path: working_private/ALASKA_GOLD_FEVER/translation
+  occurrence_inventory_path: working_private/ALASKA_GOLD_FEVER/translation/inventory_original.json
+  extraction_error_ledger_path: extracted_private/ALASKA_GOLD_FEVER/25782395/localization/errors.json
+  unicode_normalization: NFC
+runtime_qa:
+  isolation_preflight_status: NOT_RUN
+  plan: 사용자 저장 및 Steam 연결을 분리한 검수 사본의 실제 경로·화면·로그·전후 저장 비교
+release:
+  publication_scope_from_user: 지정 로컬 게임의 번역 수정 요청. 외부 게시·업로드 요청 없음.

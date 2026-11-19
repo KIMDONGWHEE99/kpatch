@@ -1,0 +1,9 @@
+Xdelta 3.2.0
+============
+
+이 배포본은 VCDIFF 차이 파일 생성·적용을 위해 Xdelta 3.2.0의 xdelta3.exe를 포함합니다.
+
+프로젝트: https://github.com/jmacd/xdelta
+저작권: Copyright (C) Joshua MacDonald and contributors
+라이선스: Apache License 2.0
+라이선스 원문: tools/LICENSE-APACHE-2.0.txt

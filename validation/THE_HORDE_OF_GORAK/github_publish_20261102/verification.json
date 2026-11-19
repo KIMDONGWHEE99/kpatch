@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-02",
+  "repository": "https://github.com/KIMDONGWHEE99/the-horde-of-gorak-korean-patch",
+  "visibility": "public",
+  "commit": "cf553a15791330ee8248a457a84c5dd2191a9a43",
+  "checks": {
+    "remote_files": {
+      "status": "PASS",
+      "count": 16,
+      "comparison": "Git blob SHA-1 and byte length",
+      "differences": []
+    },
+    "anonymous_download": {
+      "status": "PASS",
+      "http_status": 200,
+      "bytes": 8572090,
+      "sha256": "22b94d117534760284ae2d2d0f310d646465f0e21cd6058c3ff05f67a5981d2f"
+    },
+    "zip_allowlist": {
+      "status": "PASS",
+      "members": 34
+    },
+    "zip_crc_and_payload_hashes": "PASS",
+    "readme_render": "PASS",
+    "introduction_render": "PASS",
+    "introduction_images": {
+      "status": "PASS",
+      "loaded": 6
+    },
+    "local_html_visual": "NOT_RUN",
+    "additional_game_runtime_qa": "NOT_RUN"
+  },
+  "original_patch_changed": false,
+  "original_game_assets_uploaded": false,
+  "private_logs_or_saves_uploaded": false,
+  "files": [
+    {
+      "path": "downloads/THE_HORDE_OF_GORAK_KOREAN_PATCH_1.0.0_r1.zip",
+      "bytes": 8572090,
+      "sha256": "22b94d117534760284ae2d2d0f310d646465f0e21cd6058c3ff05f67a5981d2f",
+      "git_blob": "4ab16ca093c0df7689b620a8292c02d0d344c0d1"
+    },
+    {
+      "path": "images/01_title.jpg",
+      "bytes": 39912,
+      "sha256": "64626a2e9c003a8e005b9dda2d68f6407d2002c39fc0008ad38010b62afe43b3",
+      "git_blob": "a081b7fb6a537cf49e321a5c40713b73b161650b"
+    },
+    {
+      "path": "images/02_siege.jpg",
+      "bytes": 157572,
+      "sha256": "6bc13464ad1b10e87dc57ec1be699b1a9fb508d27da3dec75ccdf048e1f381af",
+      "git_blob": "aab531a9ac59348d2bcf2a0eccbd18d397f0c6b6"
+    },
+    {
+      "path": "images/03_settlement.jpg",
+      "bytes": 165563,
+      "sha256": "41232004b2194d535164620386070d9cef87e5e43e0ec26e28bb0ac0bd9dcd0e",
+      "git_blob": "57f520ed94ec119672b3cddbe57fd08baf9f0f47"
+    },
+    {
+      "path": "images/04_units.jpg",
+      "bytes": 204625,
+      "sha256": "e2a9178877c88997b315041165f3e78f7810ede4c801fe76791da1155032ae16",
+      "git_blob": "67eabce3968ca4b6447eb46474773ac0030aabd0"
+    },
+    {
+      "path": "images/05_world_map.jpg",
+      "bytes": 272873,
+      "sha256": "2b7cc6314d042b6c80fab846382d676c64cff0e1aebe2bab0e8013ab984464ca",
+      "git_blob": "7aced93e19b6e319f5bf7cfa55ef8c40ab3d9315"
+    },
+    {
+      "path": "images/06_prestige.jpg",
+      "bytes": 187020,
+      "sha256": "8c0bd967dfcc5093e1c98f9b7bdae8c9f86074919189bb9ea0475fb8105c51f8",
+      "git_blob": "9927a3362b17f5daaece6f06ef8618901da918ae"
+    },
+    {
+      "path": "INTRODUCTION.md",
+      "bytes": 5837,
+      "sha256": "0872bff7192fdbc5dd8ed236eaed2fcdc3fd5543e7c602c35d63b6edef9e3eeb",
+      "git_blob": "41173543499f3b12d9a48e4ac87c7cabe65843eb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3576,
+      "sha256": "3a9fe9008e51e66fbb52526a5cfabff9219773e855e31aeb18f9ff37944ce65c",
+      "git_blob": "70df284e472859b033ca9f63af89932b62e812e4"
+    },
+    {
+      "path": "releases/v1.0.0.md",
+      "bytes": 1953,
+      "sha256": "4d975ca08a6dc0524cf77219ae6843c406bbb7c0bae43eb31b7231b7a7dd7793",
+      "git_blob": "23116467ab44f064d92658a0d54ef18a63e41aa4"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "bytes": 121,
+      "sha256": "eb6b38f78215fb2fc3dc17c5fa7e59482d16d67ba1d41c1ac76672dec207c1eb",
+      "git_blob": "852a90cb84a45dbb411487f5ed997e80c6d6ef27"
+    },
+    {
+      "path": "미리보기.html",
+      "bytes": 8905,
+      "sha256": "51e435820c631e0f46ac0dc760775c8183f4db896dd5c5916e90b57a9c2cb6da",
+      "git_blob": "4688a62edac13642fedb45b531cc2d761b6b9e74"
+    },
+    {
+      "path": "업로드_안내.txt",
+      "bytes": 440,
+      "sha256": "656ca62f41c47da8862f3d6ed880934aad9d1fa62f76b15f64b59e817e58402a",
+      "git_blob": "1c378140506b7fe12badf2fe64dc1e266e5b50d4"
+    },
+    {
+      "path": "이미지_출처.json",
+      "bytes": 2133,
+      "sha256": "b2cc3356d044619f677fdf7ab040f5f31a8d8191811ab6d09dadcbdd6d93001e",
+      "git_blob": "150b4aff088df7b5d4e6fdec090494c4bb7190c2"
+    },
+    {
+      "path": "카페_복사용.html",
+      "bytes": 8724,
+      "sha256": "1aa990887836c01ff35aa783f8495ac7b708d49e30aabd265f75c8454cd4c6a7",
+      "git_blob": "9be92acb115336742ed5d1393907eaa2b95cb5ad"
+    },
+    {
+      "path": "카페_본문.txt",
+      "bytes": 5368,
+      "sha256": "88751608a63d1cc174963c386427634c52f90c6faf2fe1d54c4fff7ad681d059",
+      "git_blob": "176ad9af15955a267c5ce67b40089df1643cb2b9"
+    }
+  ]
+}

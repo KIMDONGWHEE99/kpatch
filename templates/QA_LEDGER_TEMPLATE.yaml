@@ -1,0 +1,143 @@
+# 검증 기록 형식의 예시입니다. 상태 집계 프로그램·검사 구현 자체가 아닙니다.
+# working_private/<game_id>/<run_id>/qa_ledger.yaml에 복사해 실제 자료를 채웁니다.
+# 아래 null·빈 목록은 통과 근거가 아닙니다. 공개 요약에서는 개인 경로·원문을 제거합니다.
+schema_version: 1
+template_only: true
+game_id: null
+task_id: null
+build_id: null
+run_id: null
+input_manifest_sha256: null
+candidate_manifest_sha256: null
+
+# 허용 상태: NOT_RUN, PASS, FAIL, BLOCKED, STALE, NOT_APPLICABLE
+# 게이트 판정은 필수 세부 검사 ID의 결과로 집계합니다. 누락·중복·알 수 없는 상태는 차단합니다.
+gate_results:
+  G0: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G1: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G2: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G3: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G4: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G5: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G6: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G7: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+  G8: {status: "NOT_RUN", required_check_ids: [], evidence_ids: []}
+
+occurrence_example:
+  occurrence_id: null
+  layer: null
+  source_file: null
+  source_file_sha256: null
+  internal_asset: null
+  object_or_method_id: null
+  field_or_literal_location: null
+  source_text_sha256: null
+  context: null
+  consumer_screen_ids: []
+  classification: "UNKNOWN"
+  classification_reason: null
+  classification_evidence_ids: []
+  expected_translation_id: null
+  expected_translation_sha256: null
+  actual_translation_sha256: null
+  comparison_status: "NOT_RUN"
+  # 같은 원문이라도 문맥이 다르면 번역 ID를 나눕니다.
+  expected_occurrences: null
+  actual_occurrences: null
+
+extraction_error_example:
+  error_id: null
+  source_file_sha256: null
+  object_or_method_id: null
+  stage: null
+  error_message: null
+  resolution_status: "NOT_RUN"
+  alternate_extraction_evidence_ids: []
+  resolved_occurrence_ids: []
+  exclusion_reason: null
+
+media_review_example:
+  media_id: null
+  source_sha256: null
+  variants_and_references: []
+  region_or_frame_range: null
+  action: "UNKNOWN"  # TRANSLATE / KEEP / NO_TEXT / UNKNOWN
+  reviewer: null
+  reviewed_at: null
+  review_evidence_ids: []
+  reason: null
+  replacement_sha256: null
+  candidate_redecode_evidence_ids: []
+
+check_example:
+  check_id: null
+  gate_id: null
+  required: true
+  status: "NOT_RUN"
+  not_applicable_reason: null
+  game_id: null
+  build_id: null
+  mode: null  # 자동 검사 / 제작자 육안 검사
+  command: null
+  tool_name: null
+  tool_version: null
+  tool_sha256: null
+  started_at: null
+  finished_at: null
+  exit_code: null
+  inputs: []  # 각 항목: path, size, sha256, 역할
+  outputs: []  # 각 항목: path, size, sha256, 역할
+  expected_count: null
+  checked_count: null
+  failed_items: []
+  evidence_ids: []
+  reused_from_run_id: null
+  reuse_dependency_proof: null
+
+runtime_screen_example:
+  scenario_id: null
+  screen_group: null
+  entry_steps: []
+  fixture_sha256: null
+  required: true
+  status: "NOT_RUN"
+  not_applicable_reason: null
+  build_id: null
+  run_id: null
+  candidate_manifest_sha256: null
+  qa_copy_manifest_sha256: null
+  qa_override_evidence_ids: []
+  observed_process_path: null
+  observed_process_id: null
+  process_observation_evidence_id: null
+  observed_at: null
+  graphics_device: null
+  resolution_and_scale: null
+  language_slot: null
+  observed_occurrence_ids: []
+  actual_font_ids: []
+  screenshot_evidence_ids: []
+  log_evidence_ids: []
+  visual_review: {reviewer: null, missing_glyphs: null, clipping: null, overlap: null, tag_exposure: null}
+  save_before_manifest_sha256: null
+  save_after_manifest_sha256: null
+  save_comparison_evidence_id: null
+
+evidence_example:
+  evidence_id: null
+  relative_path: null
+  sha256: null
+  size: null
+  captured_at: null
+  build_id: null
+  run_id: null
+  kind: null
+
+release_attestation:
+  archive_sha256: null
+  tested_archive_sha256: null
+  payload_manifest_sha256: null
+  final_zip_installer_check_ids: []
+  unresolved_blocker_ids: []
+  decision: "NOT_RUN"
+  external_report_path: null

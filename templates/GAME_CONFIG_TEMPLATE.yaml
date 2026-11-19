@@ -1,0 +1,90 @@
+# 신규 게임용 기록 양식입니다. 자동 실행기가 아직 구현된 것은 아닙니다.
+# tasks/<game_id>/GAME_CONFIG.yaml에 복사하고 작업자가 조사한 값을 채웁니다.
+# null은 미확인입니다. 미확인 필수값을 채우기 전 해당 게이트를 통과시키지 않습니다.
+schema_version: 1
+template_only: true
+game:
+  game_id: null
+  title: null
+  platform: null
+  store_app_id: null
+  game_build: null
+  engine: null
+  engine_version: null
+  scripting_backend: null
+  asset_loading_system: null
+  asset_loading_version: null
+  identification_evidence: null
+
+task:
+  task_id: null
+  spec_path: null
+  user_request_scope: null
+  supported_languages: []
+  supported_display_modes: []
+  supported_previous_patches: []
+
+baseline:
+  baseline_id: null
+  source_root: null
+  files_manifest: null
+  manifest_sha256: null
+  file_count: null
+  total_bytes: null
+
+translation:
+  # 원문·번역·판정 자료는 비공개 경로에 보관합니다.
+  canonical_path: null
+  canonical_sha256: null
+  occurrence_inventory_path: null
+  classification_review_path: null
+  extraction_error_ledger_path: null
+  media_review_path: null
+  glossary_path: null
+  context_and_style_path: null
+  unicode_normalization: "NFC"
+  required_characters_path: null
+  font_dependency_map_path: null
+
+toolchain:
+  # 실제 사용 도구 각각의 이름·버전·실행 파일 해시·출처·명령을 기록합니다.
+  lock_manifest_path: null
+  lock_manifest_sha256: null
+  commands_in_execution_order: []
+  clean_environment_rebuild_evidence: null
+
+candidate:
+  build_id: null
+  root: null
+  input_manifest_path: null
+  input_manifest_sha256: null
+  file_manifest_path: null
+  file_manifest_sha256: null
+  allowed_changes_path: null
+
+runtime_qa:
+  qa_root: null
+  expected_executable_path: null
+  allowed_qa_overrides_path: null
+  original_write_locations: []
+  isolated_write_locations: []
+  save_snapshot_plan_path: null
+  screen_scenarios_path: null
+  raw_evidence_root: null
+  # 최초 시험 전에 저장·설정·로그·외부 전송 격리를 확인합니다.
+  isolation_preflight_status: "NOT_RUN"
+
+release:
+  package_root: null
+  allowlist_manifest_path: null
+  archive_path: null
+  archive_sha256: null
+  final_zip_test_evidence_path: null
+  external_final_report_path: null
+  publication_scope_from_user: null
+
+tracking:
+  qa_ledger_path: null
+  result_report_path: null
+  current_gate: "G0"
+  unresolved_issue_ids: []

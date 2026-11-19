@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><EnableDefaultCompileItems>true</EnableDefaultCompileItems></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Alchemortis"><HintPath>../../../../source_original/ALCHEMORTIS_DEMO/steam_25443537/data_Alchemortis_windows_x86_64/Alchemortis.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="GodotSharp"><HintPath>../../../../source_original/ALCHEMORTIS_DEMO/steam_25443537/data_Alchemortis_windows_x86_64/GodotSharp.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

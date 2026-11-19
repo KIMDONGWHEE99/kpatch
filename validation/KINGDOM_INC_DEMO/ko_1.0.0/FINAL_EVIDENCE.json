@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "game_id": "KINGDOM_INC_DEMO",
+  "steam_build": "25631786",
+  "candidate": "1.0.0_rc5",
+  "version": "1.0.0",
+  "utc": "2026-10-20T14:57:42.518407+00:00",
+  "gates": [
+    {
+      "gate": "G0",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/toolchain_lock.json",
+          "sha256": "8f3b69b006576572b3f1fd678f8ed327e9ce8d7118b3134954d59acdeaec483d"
+        }
+      ]
+    },
+    {
+      "gate": "G1",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/probe05/static_validation.json",
+          "sha256": "ed4e81211d7dfc105cca20cdb6c88c2d9643896edbc45099b1ae49f5f98e970e"
+        },
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/probe05/qa_probe05/session-check.json",
+          "sha256": "e9c61f5a5057130638d0bca68212a4fd8ed41013a604933e695db15db64a4384"
+        },
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/probe05/qa_probe05/visual_review.json",
+          "sha256": "83c5086977625c085ac8f2c92dde122ab1a164e7ab898decb0af2822b5e89a09"
+        }
+      ]
+    },
+    {
+      "gate": "G2",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/audit/source_resolution_rc5.json",
+          "sha256": "cbdc9a6e5a82a4d3db296df6402f99364dd238efc39d58bb5be41c3031adc9b6"
+        }
+      ]
+    },
+    {
+      "gate": "G3",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/translation/checks.json",
+          "sha256": "e0f58c0e02f5fdda31a523701666ba8d1bc572ab058f57cc0afe3dc3add55fd2"
+        }
+      ]
+    },
+    {
+      "gate": "G4",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/1.0.0_rc5/static_validation.json",
+          "sha256": "1da0529a4a84bd2803ec74062fa362b0f55cd43af43bca5d99ad0f060bf3c9f5"
+        },
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/validator_self_test.json",
+          "sha256": "89b11a342e660635d714e666ca471c7e1274ebf13968db1abeee9619b83e0c43"
+        }
+      ]
+    },
+    {
+      "gate": "G5",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/audit/runtime_final_resolution.json",
+          "sha256": "a3b7308cb76f5869a331461aac6e9775c348fc19886606eac57ce7d9dfc2085c"
+        }
+      ]
+    },
+    {
+      "gate": "G6",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/package_1.0.0_r2/final_zip_audit.json",
+          "sha256": "a23d0a9d12cc76df1fa39e43a2be3903b6d039233ad201129fd403b917eee303"
+        }
+      ]
+    },
+    {
+      "gate": "G7",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/package_1.0.0_r2/installer_tests.json",
+          "sha256": "1d5bea433393de1f901dc1ae18eab3e7d8b3d64dbf51d38d262d29e88efe36c6"
+        },
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/actual_install_package_1.0.0_r2/after.json",
+          "sha256": "3ac669b9bca9bd1a0e8f7548d0c720253c7c4de32e4ecb5c9a630d7b4ae49390"
+        },
+        {
+          "path": "working_private/KINGDOM_INC_DEMO/verify_install_selftest/result.json",
+          "sha256": "9885ecab087b67c91034cf5e35628c648ece28fcf944e9750cb5f96f15735937"
+        }
+      ]
+    },
+    {
+      "gate": "G8",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "validation/KINGDOM_INC_DEMO/ko_1.0.0/RESULT_REPORT.md",
+          "sha256": "2334f2fe3f3ca5539e5b57605c0612db585e874a4275baf7b7aea72a8b2aaa45"
+        },
+        {
+          "path": "validation/KINGDOM_INC_DEMO/ko_1.0.0/SOURCE_AND_SCOPE.md",
+          "sha256": "ebe62d7c4221c0d6e34e64b6827f5ca08f12ef85ce44dff8f059b4575977f6d8"
+        },
+        {
+          "path": "validation/KINGDOM_INC_DEMO/ko_1.0.0/RUNTIME_QA.md",
+          "sha256": "dca79a83ec4508221d65dbe159946062ac1c990ed8ae18ee55de4818bbe726c6"
+        },
+        {
+          "path": "validation/KINGDOM_INC_DEMO/ko_1.0.0/INSTALLER_QA.md",
+          "sha256": "1bbac148b14d60efdb3f5967f9fc0af24a863413bf1527dd9264539a75578edf"
+        },
+        {
+          "path": "tasks/KINGDOM_INC_DEMO/README.md",
+          "sha256": "fdbfb7fd767a9cc6b6fbc99fe5468881c0032793fdeddf2caf376a0066f05eba"
+        },
+        {
+          "path": "tasks/KINGDOM_INC_DEMO/TASK_SPEC.md",
+          "sha256": "78e82fa3a8c6ff47fc766f34281718a99df20b8a595322e7dd0d945d655f38bc"
+        }
+      ]
+    }
+  ],
+  "package": {
+    "path": "release_output/KINGDOM_INC_DEMO_KOREAN_PATCH_1.0.0_r2.zip",
+    "sha256": "a290b3952218061a67f49b80504638ec04fc6a7e99cdeb38035d75f76968f092"
+  },
+  "package_size": 8998918,
+  "package_report": {
+    "path": "working_private/KINGDOM_INC_DEMO/package_1.0.0_r2/package.json",
+    "sha256": "176c340bfa1e08030484876c07a69b59477601a6692f161d30842707a4851d37"
+  },
+  "installed": {
+    "status": "PASS",
+    "files": 191,
+    "changed_files": 8,
+    "added_files": 0,
+    "original_backups": 8,
+    "user_state_unchanged": true
+  },
+  "scope": "G0~G8은 상세 보고서에 기재한 조사·정적 검사·대표 화면군·설치 및 복구 범위에 한정. 전체 회차와 모든 분기 완료 주장이 아님.",
+  "not_run": [
+    "전체 회차 완주",
+    "모든 무작위 조합",
+    "정상 플레이를 통한 모든 기술 해금",
+    "모든 전투 결과",
+    "전 번역 위치의 실제 화면 관찰",
+    "사용자 설치본 추가 그래픽 실행"
+  ],
+  "source_scope": "게임 자산과 Assembly-CSharp의 표시 출처 및 연결된 공용 소비자를 조사. 엔진·.NET·Steam 공용 라이브러리 전체 문자열 추출은 NOT_RUN이며 제외 근거는 SOURCE_AND_SCOPE에 기록.",
+  "privacy": "비공개 근거의 경로·내용 지문과 결과 수만 기재. 원본 게임 자산·검수 코드·사용자 저장 원문 없음.",
+  "issues": []
+}

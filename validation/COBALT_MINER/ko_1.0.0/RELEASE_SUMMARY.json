@@ -1,0 +1,44 @@
+{
+  "game_id": "COBALT_MINER",
+  "steam_build": "24347666",
+  "version": "1.0.0",
+  "candidate": "ko_candidate_03",
+  "result": "INSTALLED_WITH_USER_REQUESTED_REVIEW_LIMITS",
+  "installed_directory": "D:/steam/steamapps/common/Cobalt Miner",
+  "zip_name": "COBALT_MINER_KOREAN_PATCH_1.0.0_r1.zip",
+  "zip_sha256": "e80c32201aebef5941f723ca017c90dd15721c2720a4701f68f84605cda9d615",
+  "zip_size": 6973929,
+  "package_file_count": 23,
+  "modified_game_files": 6,
+  "verified_installed_files": 15,
+  "originals_backed_up": 6,
+  "preserved_user_files": 2,
+  "known_translation_omissions": 0,
+  "general_translation_positions": 517,
+  "native_translation_fields": 192,
+  "changed_images": 12,
+  "unknown_native_strings": 1237,
+  "installer_checks": {
+    "PASS": 44,
+    "NOT_APPLICABLE": 1
+  },
+  "gates": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "FAIL",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "FAIL",
+    "G6": "PASS",
+    "G7": "PASS",
+    "G8": "NOT_RUN"
+  },
+  "gate_scope": "G3/G4는 확인된 번역 대상과 고정 후보 범위. G2/G5 미완료를 생략한 개인용이며 공통 완성판 G8은 미통과.",
+  "game_launch_after_install": "NOT_RUN",
+  "public_upload": "NOT_RUN",
+  "limitations": [
+    "전체 시설·도움말·예비 화면·분기·회차 미검증",
+    "엔진 문자열1237개 실제 표시 여부 미확정",
+    "빠른 A엔딩 전환 종료 오류는 원본과 후보 모두 재현. B검수 종료 오류 원인 미확정"
+  ]
+}

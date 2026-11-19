@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "completed": "2026-10-11T02:08:37.8021488+09:00",
+  "deleted_targets": 305,
+  "deleted_files": 21988,
+  "deleted_bytes": 4969810789.0,
+  "drive_free_before": 149028429824,
+  "drive_free_after": 154040209408,
+  "drive_free_increase": 5011779584,
+  "protected_files_verified": 1834,
+  "other_game_files_verified": 38453,
+  "game_execution": "NOT_RUN",
+  "scope": "이번 Agromatic 작업에 사용한 게임 사본·추출 및 복원 자산·중복 합성 시험 출력·그래픽 캐시",
+  "preserved": "스팀 설치본·복구 백업·패치 ZIP·번역·제작 도구·분류와 오류 기록·검수 캡처 및 로그·격리 저장 증거·패치 개선 교훈",
+  "private_plan_sha256": "2e99068c62ed12545ea9497b139005e0bec91d070827fa7a975cd80d1310b063",
+  "private_result_sha256": "950bdc8d617ecd5155c3253945d83789bc9d2baea3f59f9450b7e8a0fe899bd8",
+  "lessons_sha256": "62618f0af2340be65b42aacd816a25bb214c9d0be45fb2b90eb5ad440b0a8aae",
+  "patch_zip_sha256": "737f4a84be5c820b218dab2d68ed36965908027ac6ebad6063c741a8f63b15c1",
+  "verification_scope": "보존 1,834파일은 SHA-256 대조. 다른 게임 38,453파일은 존재·크기·수정 시각 대조. 문서의 정리 안내는 이 확인 이후 별도로 갱신."
+}

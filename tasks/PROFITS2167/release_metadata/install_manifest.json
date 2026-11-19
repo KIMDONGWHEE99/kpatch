@@ -1,0 +1,297 @@
+{
+  "patch_id": "PROFITS2167-KO-20260829-051",
+  "patch_version": "0.5.1",
+  "game": "PROFITS2167",
+  "game_build_guid": "ef70fc61842a4a7e88293bd7daf7bd9f",
+  "default_game_path": "D:\\steam\\steamapps\\common\\PROFITS2167",
+  "prior_backup_versions": [
+    "0.5.0",
+    "0.4.0",
+    "0.3.0",
+    "0.2.0",
+    "0.1.0"
+  ],
+  "tools": {
+    "xdelta": {
+      "relative_path": "tools/xdelta3.exe",
+      "size": 336896,
+      "sha256": "53d90226615f217d3380c39892833311b4e24acd863e1ca01f14b5e772e2e6d0",
+      "version": "3.2.0"
+    }
+  },
+  "files": [
+    {
+      "relative_path": "PROFITS2167_Data/resources.assets",
+      "original_size": 9872040,
+      "original_sha256": "c6b11354b95414ddfdce6c5ce416d7b256908622fa371fcd58bfa9ef49a4ed33",
+      "patched_size": 118421056,
+      "patched_sha256": "54b4c31232e20bf8c994602974e3d3485d86a8d93b6d6ed96bc3006cc8ad7064",
+      "patch_file": "patches/resources.assets.xdelta",
+      "patch_size": 2027989,
+      "patch_sha256": "8cafef1e902472fba4dddd93a8078c145790daf25d9467f0159e94db7ed17677",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 resources.assets",
+          "source_size": 118420544,
+          "source_sha256": "cf1e0b22b7949416a73fe5671ba8158afa5d4c16f463c470ccd59c8ca77b6c1c",
+          "patch_file": "patches/upgrade-v0.4.0-resources.assets.xdelta",
+          "patch_size": 9129,
+          "patch_sha256": "6efcddc0b882bb8c184fe302f7167d8c45995e8db74a2eeaf566963423e80d16",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-resources.assets.xdelta",
+          "rollback_patch_size": 8901,
+          "rollback_patch_sha256": "d9114c061e13a6b27b77d6a77337839f3ec92353f3257e8aa8a829f4961f4134"
+        },
+        {
+          "label": "0.3.0 resources.assets",
+          "source_size": 118420128,
+          "source_sha256": "83c56091a95231a001991bbbffb8f5f71a96769eb293b6195bf0186f8c4eafcb",
+          "patch_file": "patches/upgrade-v0.3.0-resources.assets.xdelta",
+          "patch_size": 13320,
+          "patch_sha256": "73955a0e0604a507c1700dfc6cc40865860e92f79e20571601af20791c9df102",
+          "rollback_patch_file": "patches/rollback-to-v0.3.0-resources.assets.xdelta",
+          "rollback_patch_size": 13302,
+          "rollback_patch_sha256": "e40af3162f06e1536cfde3b917102a60e4de48e9015405d6f8d6110969a87a6a"
+        },
+        {
+          "label": "0.2.0 resources.assets",
+          "source_size": 118420280,
+          "source_sha256": "7105882f416ecc58aaea7b38ee73bab8ed3786c0fb16dffaf2f801ff2c5543c4",
+          "patch_file": "patches/upgrade-v0.2.0-resources.assets.xdelta",
+          "patch_size": 23254,
+          "patch_sha256": "021a2787ab8a5ed1959dc9a946d2d8d80bf8c33c56b5f80585e6b7f9605b8ea6",
+          "rollback_patch_file": "patches/rollback-to-v0.2.0-resources.assets.xdelta",
+          "rollback_patch_size": 23660,
+          "rollback_patch_sha256": "949ff0ee5a19eec71caa340f79b823f2e68407d94b51f289e9d040e4b8168855"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/StreamingAssets/aa/catalog.json",
+      "original_size": 107434,
+      "original_sha256": "c52e0c7648e3d53be80d0b67ef4db3a78d29d04f65a6fc9f7d50f03641a3737d",
+      "patched_size": 107410,
+      "patched_sha256": "6f36fb04418b966016b5a4c5982c6eec42beaa6a217d899cbc6315971ce9e8ec",
+      "patch_file": "patches/catalog.json.xdelta",
+      "patch_size": 463,
+      "patch_sha256": "d5b9a24821f77db4f202df9327b48fffe7ad3b5fa3e31d1e7d2451a51ca07a6e",
+      "upgrade_sources": []
+    },
+    {
+      "relative_path": "PROFITS2167_Data/StreamingAssets/aa/StandaloneWindows64/localization-string-tables-english(en)_assets_all.bundle",
+      "original_size": 13273,
+      "original_sha256": "709dc25ac7abdb5227f9e8cf6409a16d31e6b503a31881d1587c84bde4f28e0b",
+      "patched_size": 13137,
+      "patched_sha256": "5e745a71ca5298fc27d90829578ebdd136f871de32161adabf340be81b09e07b",
+      "patch_file": "patches/localization-string-tables-english(en)_assets_all.bundle.xdelta",
+      "patch_size": 10621,
+      "patch_sha256": "1091ac65373e839da83a243cbc8bdcda16b8aedfa0024009752406a50629db15",
+      "upgrade_sources": []
+    },
+    {
+      "relative_path": "PROFITS2167_Data/sharedassets0.assets",
+      "original_size": 13259164,
+      "original_sha256": "e855a59079bc8448cc0d795760134ab2d5a3aa49f137cc7c42a822de503682da",
+      "patched_size": 95266024,
+      "patched_sha256": "46529647c828d4b74f732740c3142c74054fac9656408cd38cd282b8e8709bf0",
+      "patch_file": "patches/sharedassets0.assets.xdelta",
+      "patch_size": 1665007,
+      "patch_sha256": "2fbb09791fa96814025e8554f80121075287e679a31ae231b082f92d1b26c9bf",
+      "upgrade_sources": []
+    },
+    {
+      "relative_path": "PROFITS2167_Data/level0",
+      "original_size": 235360,
+      "original_sha256": "7f214ffa7da17139c4a09d098d95e0765b7dc248870f23ad6bbd1729145c774a",
+      "patched_size": 235456,
+      "patched_sha256": "7af88e32f6b834af341c2a6d83ea5f88ca336f48ed0412dfd872966d0ec69daf",
+      "patch_file": "patches/level0.xdelta",
+      "patch_size": 3032,
+      "patch_sha256": "bd5977a7470611dbe287d7fb7a45147f40823d9804c3ffb58a642d2f697ae16b",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 level0",
+          "source_size": 235456,
+          "source_sha256": "0efb0360a06efbc4c5d107fd888f8fb0aa6115f957b5861716a48293480c232d",
+          "patch_file": "patches/upgrade-v0.4.0-level0.xdelta",
+          "patch_size": 531,
+          "patch_sha256": "0355e95e048812c725df516812bd99926e1420a7d07e5475a921c424557ec1b3",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-level0.xdelta",
+          "rollback_patch_size": 535,
+          "rollback_patch_sha256": "d079628de96484de8d7357f6028b13d301ed682007cab056d98240894a1a38b2"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/level1",
+      "original_size": 280448,
+      "original_sha256": "95a1f7e8273401cc68705efdbb1aa5ec1347f7e89462e9c9dea06f08aa860137",
+      "patched_size": 280696,
+      "patched_sha256": "e05e63ab4d12b358f5016de71a5d3d986c88096c91b3963fff9390d0f177e205",
+      "patch_file": "patches/level1.xdelta",
+      "patch_size": 4377,
+      "patch_sha256": "81a20fc5716ac1ec518d03be6651224edfc989701afc9c72b45c070afd3f2298",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 level1",
+          "source_size": 280696,
+          "source_sha256": "884b12bb7fc4db737330279c27dfc24507d91f51aaa6058474ab3631942e7f5e",
+          "patch_file": "patches/upgrade-v0.4.0-level1.xdelta",
+          "patch_size": 427,
+          "patch_sha256": "042f6bde59cf3a5a283399aa4640610a6a94d511762cacff076409f98be95df7",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-level1.xdelta",
+          "rollback_patch_size": 427,
+          "rollback_patch_sha256": "23372444a42bf474a18227b8c143bd9ec319bcbc317d1c0f9efdc448bc2b118b"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/level2",
+      "original_size": 26571640,
+      "original_sha256": "1964d017c2f2e718a2c9ab19c07d0b5e68c69a1836742c96e1239c4619b1e499",
+      "patched_size": 26572376,
+      "patched_sha256": "6001d1d3a43604b519ce5dc7c3d36772b2df4f1ee2556ce3bb3d403b99f97d17",
+      "patch_file": "patches/level2.xdelta",
+      "patch_size": 11298,
+      "patch_sha256": "a20ae28ef1ab3df9ebdcb15cab87f747c3233c615671c552c2c86501980c703f",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 level2",
+          "source_size": 26571976,
+          "source_sha256": "8e1d85b5f8b724ab888efa855dae7c10941d0bccce66f19e5b6e9114fba55d90",
+          "patch_file": "patches/upgrade-v0.4.0-level2.xdelta",
+          "patch_size": 5483,
+          "patch_sha256": "0875ea92b0749c83097975f3e4b230613ec2a2ac18dad40198efb5d0ad96ba07",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-level2.xdelta",
+          "rollback_patch_size": 5434,
+          "rollback_patch_sha256": "8e7227a9c3379d3f3ab04c12196fa8089b93c58309d85b67fb584b780051fc9c"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/level3",
+      "original_size": 96731336,
+      "original_sha256": "e9c92e6e1f2ee839ceedb1237393959b994f409ca933039c6ceea9176877e280",
+      "patched_size": 96732128,
+      "patched_sha256": "c659cd6c2b930985eade7d842ff790070e4762cfb10aa1a4a7f1af3e2f73b21a",
+      "patch_file": "patches/level3.xdelta",
+      "patch_size": 17497,
+      "patch_sha256": "cf1153e38284d1006de5ba4880387b325b3a78775d36b4082d095db066a9a1b1",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 level3",
+          "source_size": 96731728,
+          "source_sha256": "1ce8ed754a3358835ef083e1396aa4e815111d03a1ac95e3d5ca318c931588b2",
+          "patch_file": "patches/upgrade-v0.4.0-level3.xdelta",
+          "patch_size": 11227,
+          "patch_sha256": "4a3c5025785690f1bdc4fe70ef7c478936eb5c4e41009c9c730866374a258e30",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-level3.xdelta",
+          "rollback_patch_size": 11238,
+          "rollback_patch_sha256": "2bd6f689d59676d82bda9618d650f0a287cc11675dc87876e078670374e6e06e"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/level4",
+      "original_size": 122586184,
+      "original_sha256": "19840680ed5de79668bc398450b6c7bd43c6c044bcc8a00156077e97fabdd3fc",
+      "patched_size": 122587040,
+      "patched_sha256": "4ee39d9269208e564a5ca6380abc66f161773921bba15fff2f3e25d80fd74af0",
+      "patch_file": "patches/level4.xdelta",
+      "patch_size": 22510,
+      "patch_sha256": "e2a848f03d3021a18c2e8db64951532671f84eb15fec43b1a4d742a42cbfd40d",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 level4",
+          "source_size": 122586552,
+          "source_sha256": "75baabbed5e30f5e7a36d870c35017d35bed759466e5fa5eeaea1a0ad2ba7360",
+          "patch_file": "patches/upgrade-v0.4.0-level4.xdelta",
+          "patch_size": 16434,
+          "patch_sha256": "5f69b24ee9b2c396feef2178578389edd22564c9048e25a85f57048de3da5dce",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-level4.xdelta",
+          "rollback_patch_size": 16331,
+          "rollback_patch_sha256": "09f83ebf279aff73b49f81cff55c5ab28a5eb9e86ac1afda915669c7e267df64"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/level5",
+      "original_size": 95129272,
+      "original_sha256": "4fb35f7922e41baedc5b7c8181ce95ff4fe22c1bf5a68174706f11862a1fd705",
+      "patched_size": 95130064,
+      "patched_sha256": "4642d415db54bbcfcfd22c5743ac7641e97e3e266e438a373e1ee7ba49620da1",
+      "patch_file": "patches/level5.xdelta",
+      "patch_size": 19980,
+      "patch_sha256": "5e51e4dc818fe24a01a54d7e4052bcf639a1c813eefd7c1ec890529be81adf82",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 level5",
+          "source_size": 95129664,
+          "source_sha256": "221831115b22b20759dcee04ef978dea5c2b1e02d9a757afbb5a3d738c78d72e",
+          "patch_file": "patches/upgrade-v0.4.0-level5.xdelta",
+          "patch_size": 13221,
+          "patch_sha256": "b1111346e84ef67fb081c2ba5434af3beaf8b11c494f1d3961501ebd4d6d07c8",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-level5.xdelta",
+          "rollback_patch_size": 13281,
+          "rollback_patch_sha256": "89419f4b5a302e0aff9dc9a9c9eb69fc469c96cb936c3be228e85fbd1c6993bd"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/level6",
+      "original_size": 79261144,
+      "original_sha256": "b119f935ac124b39aada6733c7ea537244e3de49a4bf3a917d6b027ba9bc766d",
+      "patched_size": 79261936,
+      "patched_sha256": "175112e5476c448db2a6bdb3990b1c780ecb3a98b3f1dd99325f5fc3d5c046ac",
+      "patch_file": "patches/level6.xdelta",
+      "patch_size": 20367,
+      "patch_sha256": "749da6c6e400fddd0d626a693b5366ff99afa9fcc63dff1ebbd6e56a79f018e6",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 level6",
+          "source_size": 79261536,
+          "source_sha256": "87918f6861d2102b9340f3005efb9296305ad1bb4c948e70b56eb9faf1b4cd70",
+          "patch_file": "patches/upgrade-v0.4.0-level6.xdelta",
+          "patch_size": 13756,
+          "patch_sha256": "34378c00b108abd2f8ff97d9423043ec7d0c0fa149341b1692ac10d1f48370d1",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-level6.xdelta",
+          "rollback_patch_size": 13734,
+          "rollback_patch_sha256": "9cadffc4f6ad5b54d7ae3a6570e45c179ea703e5c05f0b1905e2e584e0759b42"
+        }
+      ]
+    },
+    {
+      "relative_path": "PROFITS2167_Data/il2cpp_data/Metadata/global-metadata.dat",
+      "original_size": 13885412,
+      "original_sha256": "9bd685aa8f35d05df2d26109ac6e32912d46daa0a2adfe9f420472c83abcf4bf",
+      "patched_size": 13887985,
+      "patched_sha256": "cb14bab5acbb31bf15064ea7257d7da4ce7c0f67264a9f94a7f02b4311d32aed",
+      "patch_file": "patches/global-metadata.dat.xdelta",
+      "patch_size": 64630,
+      "patch_sha256": "6dbadc930255d2f17c694ac1c77dfa7b6f30deb966e437ec40ea278b031454be",
+      "upgrade_sources": [
+        {
+          "label": "0.4.0 global-metadata.dat",
+          "source_size": 13887666,
+          "source_sha256": "9e5c3c7e350442b7a2b0502ec8a5802d40455d1d04a2b88a306a86baf900f9ff",
+          "patch_file": "patches/upgrade-v0.4.0-global-metadata.dat.xdelta",
+          "patch_size": 55707,
+          "patch_sha256": "7f1a079cfd4b9f4ed7660a71a3a8934ef8c3a413f9bb4e10cc8735ba8d897a1c",
+          "rollback_patch_file": "patches/rollback-to-v0.4.0-global-metadata.dat.xdelta",
+          "rollback_patch_size": 55488,
+          "rollback_patch_sha256": "6dfa17c115798c6caed55b05aaa0037c15a1fcc329892b30a51b3b27adcc0064"
+        },
+        {
+          "label": "0.3.0 global-metadata.dat",
+          "source_size": 13885945,
+          "source_sha256": "ac1f2ea997314168ce44f0e538a611a94b3b67931a6a0459db0e7fb1de7349f5",
+          "patch_file": "patches/upgrade-v0.3.0-global-metadata.dat.xdelta",
+          "patch_size": 62603,
+          "patch_sha256": "c6be2e4f76b3b1c582c7b17908024c9d2c401b8f24600f433967fa55f4fa85ac",
+          "rollback_patch_file": "patches/rollback-to-v0.3.0-global-metadata.dat.xdelta",
+          "rollback_patch_size": 61934,
+          "rollback_patch_sha256": "0de489f559ba5b897ffa18e0040427a9c274126a3688aa53295884d9972123f9"
+        }
+      ]
+    }
+  ]
+}

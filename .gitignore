@@ -1,0 +1,43 @@
+# 원본 및 파생 게임 자산은 커밋하지 않는다.
+/source_original/**
+/backups/**
+/build_candidate/**
+/extracted_private/**
+/working_private/**
+/quarantine/**
+/viewer_output/**
+
+# 배포 결과: ZIP과 풀어 둔 폴더는 커밋하지 않고 해시 기록만 남긴다.
+/release_output/*
+!/release_output/.gitkeep
+!/release_output/*.sha256.txt
+
+# 공용 도구 바이너리: 이름·버전·해시는 tools/THIRD_PARTY_TOOLS.md에 있다.
+/tools/python_deps/
+/tools/gdre_2.6.4/
+
+# 빌드 산출물, 실행 파일, 압축 파일, 게임 자산 묶음(.pck·.assets), 차이 패치(.xdelta)
+/tasks/**/bin/
+/tasks/**/obj/
+*.dll
+*.exe
+*.pdb
+*.zip
+*.pck
+*.assets
+*.xdelta
+
+# 게임에서 나온 이미지
+/deliverables/**/images/
+/tasks/**/media/
+
+# 정리 대기, 실행 로그, 임시 파일
+/_to_delete/
+*.log
+*.tmp
+*.new
+__pycache__/
+*.pyc
+
+# Claude Code의 개인 설정
+/.claude/settings.local.json

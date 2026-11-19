@@ -1,0 +1,66 @@
+{
+  "game": "Alaska Gold Fever",
+  "build_id": "25782395",
+  "use": "PERSONAL",
+  "status": "INSTALLED",
+  "game_path": "D:\\steam\\steamapps\\common\\Alaska Gold Fever",
+  "candidate": "ko_edit_c01",
+  "tables_reviewed": 1893,
+  "dialogues_reviewed": 966,
+  "tables_edited": 716,
+  "dialogues_edited": 735,
+  "verification": "PASS",
+  "final_runtime": "NOT_RUN",
+  "backup_path": "C:\\Users\\PC\\Documents\\ChatGPT\\한글패치\\source_original\\ALASKA_GOLD_FEVER\\installation_backup\\20261015_152641",
+  "files": [
+    {
+      "path": "Alaska Gold Fever_Data/StreamingAssets/aa/StandaloneWindows64/localization-string-tables-korean(ko)_assets_all.bundle",
+      "installed_sha256": "a9da2ddfe5c88f9a0745d7b2fbd587c91938880532af1fd5ad11bb12df8be9a8",
+      "backup_sha256": "882762dfce49fab99f94c06809a9cbfd5fd7bfade18408c73c39f13a7049bd85",
+      "status": "PASS"
+    },
+    {
+      "path": "Alaska Gold Fever_Data/StreamingAssets/aa/StandaloneWindows64/localization-string-tables-korean_assets_all.bundle",
+      "installed_sha256": "2592aefce6307cd0724c4481c7ec06b601bb999468d28b8d2e20290d8e482314",
+      "backup_sha256": "4674f9c8ccc47b1bedf57e04f77154e0bc8606626060c44cb7e55eefa172fe2c",
+      "status": "PASS"
+    },
+    {
+      "path": "Alaska Gold Fever_Data/StreamingAssets/aa/catalog.bin",
+      "installed_sha256": "242d49d9b034817907fe80194711e6a2b576ca6e251c80393708d64ff037c15f",
+      "backup_sha256": "1c5f265420e4f219d4199161e5258d833399c906f10b80b1fe4bf70a6810201a",
+      "status": "PASS"
+    },
+    {
+      "path": "Alaska Gold Fever_Data/StreamingAssets/aa/catalog.hash",
+      "installed_sha256": "2f1bf7d8efa979066f4f92b07aca4925eefcbe2287b861526057ef883b4aa746",
+      "backup_sha256": "493ddf4fbf54e99f8a815362bd7b731afe022d9fbaf419fd9cfcf26dbc6fad3b",
+      "status": "PASS"
+    },
+    {
+      "path": "Alaska Gold Fever_Data/resources.assets",
+      "installed_sha256": "cfb917b87f48a38e367b17048eb9dde78eabb4e441fa834b6b8a58cc91b9183e",
+      "backup_sha256": "479a8a6aab6d551d8a69bc9390808c4c13251b744431ae3f910696a5fe33259a",
+      "status": "PASS"
+    },
+    {
+      "path": "Alaska Gold Fever_Data/sharedassets2.assets",
+      "installed_sha256": "1e9f222e3bac9eefb2da7409bb1864a438fd68d276f71e9f734609c4aa2aa16b",
+      "backup_sha256": "e5146f70651cb7296670342b01fbd274b011a448f3985b732e8829d85180de20",
+      "status": "PASS"
+    },
+    {
+      "path": "Alaska Gold Fever_Data/sharedassets3.assets",
+      "installed_sha256": "83ca93487d65e0ad1e3f8d052524e46fbb7c4dcdee3f5d5053d658028e24734d",
+      "backup_sha256": "90101f4b1c2200d418bfc7e6e85afefc6829c0b59312bc24c5afd5feb8a0abf4",
+      "status": "PASS"
+    }
+  ],
+  "candidate_manifest_sha256": "62efee7c6690a0c6dcabf1d63c3d2620e536188be536d25104abc80ecda2155c",
+  "verification_sha256": "01b59d6f1c6213eea646b25b2d57bb4fe979ce00da55c68ef077e66938cba959",
+  "font_report_sha256": "6933b835e1dc85234a25ef593955b4a4727245a9f4ac18ef1cdd5b7a411299eb",
+  "installation_journal_sha256": "28ce5baa6b19cd95d61d43ba001a85c997fd8cc10ff5ef75269ab65edcd5fbf3",
+  "scope_note": "사용자 요청으로 개인용 최소검사. 추가 플레이·전체 출처·미디어·공개 배포 ZIP·복구 오류주입 시험은 생략.",
+  "user_save_after_sha256": "371650cf5f596dfa28d96734d95ed238023c50df66cd97bab1ad7b16f41cecbc",
+  "g1_observation_sha256": "3a31cd9878391a23a47f428ec4cfbb07b6b12db7a37d5a590c1db3d65765cc1a"
+}

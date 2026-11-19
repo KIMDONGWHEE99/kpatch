@@ -1,0 +1,36 @@
+{
+  "source_page": "https://store.steampowered.com/app/4601880/Cobalt_Miner/",
+  "date": "2026-11-02",
+  "images": [
+    {
+      "filename": "01_title.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4601880/50f066fec87fa286bd27eee520a89a5330674a1e/header.jpg?t=1793114649",
+      "sha256": "94b60110fa5cfa09b4b611e669ff7259b36fc2790a4df12adba3033f3ac389dc"
+    },
+    {
+      "filename": "02_mining.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4601880/d9e581306b67a648d7b757db68f0503f11182823/ss_d9e581306b67a648d7b757db68f0503f11182823.1920x1080.jpg?t=1793114649",
+      "sha256": "36e1c13b8c428948fd40391b563f76b676574bfc4c0da7d7d82e7dce56e79ba1"
+    },
+    {
+      "filename": "03_upgrades.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4601880/be9f6c406a6e833dad6216859d691cae18fe2be9/ss_be9f6c406a6e833dad6216859d691cae18fe2be9.1920x1080.jpg?t=1793114649",
+      "sha256": "be7bfe5857f53b7b2c638882e69959208d06637dfe187fc0fb9acd4278928449"
+    },
+    {
+      "filename": "04_motorbike.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4601880/faa3ad7fafa5cb9724aaba1e45d021ba350b3903/ss_faa3ad7fafa5cb9724aaba1e45d021ba350b3903.1920x1080.jpg?t=1793114649",
+      "sha256": "bbf8721bd36677ae0e7b27e82debc1da25675bf5953803b310e4795f782b8668"
+    },
+    {
+      "filename": "05_daily_life.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4601880/377abcb4ae44150a9e059db53a917673ca2f0a33/ss_377abcb4ae44150a9e059db53a917673ca2f0a33.1920x1080.jpg?t=1793114649",
+      "sha256": "6c4e0d3fcd9792c3047aba630d96b8dd73591d8b877af7e717ea36e51db9ae26"
+    },
+    {
+      "filename": "06_corporate_world.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4601880/c62a58d85244fa3bf0feb09dd9581e6c32793ef0/ss_c62a58d85244fa3bf0feb09dd9581e6c32793ef0.1920x1080.jpg?t=1793114649",
+      "sha256": "9b0cfc85c1b7a29b6520356bb859f3bc13c411f19b1c2b33a0e9b4506e0462a5"
+    }
+  ]
+}

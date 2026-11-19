@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "repository": "https://github.com/KIMDONGWHEE99/how-empires-work-korean-patch",
+  "visibility": "public",
+  "commit": "f91b058fbefb12abe21af6b9b0cb984a7f2ced97",
+  "default_branch": "main",
+  "release": "https://github.com/KIMDONGWHEE99/how-empires-work-korean-patch/releases/tag/v1.0.1-r2",
+  "tag": "v1.0.1-r2",
+  "public_files": 18,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "size": 8,
+      "status": "PASS"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "35aa94286e8d323f54246153af5be8b21feb943e2a4543fde87a5675250f761c",
+      "size": 189,
+      "status": "PASS"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "017d79589ca60a6db0935c207d06e78a7ebeee7cbec2a6d7f390c85bd83bbb3e",
+      "size": 551,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/verification.json",
+      "sha256": "6038b7a90825564e5162c18e34698aa429a2a4f2740118912dee53502c81d365",
+      "size": 4542,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "5eba281923a11a5fa73d1d2a46587f29832537c526355cdcd4c8c367a489b270",
+      "size": 2026,
+      "status": "PASS"
+    },
+    {
+      "path": "installer/ChooseGame.ps1",
+      "sha256": "e5f74707854a7c3fc67f972055e7875e9c76649f726aff13cf38f85a2de24ea4",
+      "size": 9451,
+      "status": "PASS"
+    },
+    {
+      "path": "installer/Install.cmd",
+      "sha256": "08a30176373302eacdbc33cecf2a19a1a52da6029ef903f5cce6f26b06b08013",
+      "size": 185,
+      "status": "PASS"
+    },
+    {
+      "path": "installer/manifest.json",
+      "sha256": "5502969b1d1f66c953fed4993cd533269773eb31f62cd632efd36634fe3e05a0",
+      "size": 3760,
+      "status": "PASS"
+    },
+    {
+      "path": "installer/Patch.ps1",
+      "sha256": "ef0af68eadafbfa35cd985f853c211eaf559b79bf8e04a2020562178c84e5b24",
+      "size": 15286,
+      "status": "PASS"
+    },
+    {
+      "path": "installer/README.md",
+      "sha256": "2645798d496e418fcaabc0387b7cedddb4a8689dd9abab641a329322d4e1dcc2",
+      "size": 296,
+      "status": "PASS"
+    },
+    {
+      "path": "installer/Remove.cmd",
+      "sha256": "cd37bc3125b7a486f8ec94c9149f776e975f988a3c0fd41cfbd7aac76c37a845",
+      "size": 187,
+      "status": "PASS"
+    },
+    {
+      "path": "licenses/NotoEmoji-OFL.txt",
+      "sha256": "500bb1ccf43df7bbb522112f9133a52b16e1c35e809632f5d8609b179152de5b",
+      "size": 4330,
+      "status": "PASS"
+    },
+    {
+      "path": "licenses/NotoSansKR-OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "size": 4388,
+      "status": "PASS"
+    },
+    {
+      "path": "licenses/NotoSansSymbols2-OFL.txt",
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+      "size": 4383,
+      "status": "PASS"
+    },
+    {
+      "path": "licenses/SourceHanSans-OFL.txt",
+      "sha256": "fcac737e761ec63dbfbdce11030a1780161920d80315edba9c8beff1c2bac5a2",
+      "size": 4463,
+      "status": "PASS"
+    },
+    {
+      "path": "licenses/xdelta3-APACHE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358,
+      "status": "PASS"
+    },
+    {
+      "path": "README.md",
+      "sha256": "30909e9663e6e47f4d61ccdca8db8b67027826c45c1ec3b8131b3a55534f47c3",
+      "size": 3242,
+      "status": "PASS"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "3f83498e2f6da411dd3896b0d4587b9a6e523de3c9ea49d8ddc1ccfbbaaf40de",
+      "size": 109,
+      "status": "PASS"
+    }
+  ],
+  "anonymous_download": {
+    "url": "https://github.com/KIMDONGWHEE99/how-empires-work-korean-patch/releases/download/v1.0.1-r2/HOW_EMPIRES_WORK_KOREAN_PATCH_1.0.1_r2.zip",
+    "bytes": 228287547,
+    "sha256": "931e99a260218ec518261459ba1240ab11f6d08906fc2a2d6358297189686065",
+    "status": "PASS"
+  },
+  "published_assets": 2,
+  "original_game_and_personal_saves_published": false,
+  "game_or_patch_changes": "NONE"
+}

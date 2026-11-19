@@ -1,0 +1,29 @@
+game_id: BOREWORKS_DEMO
+game_name: BOREWORKS Demo
+steam_app_id: 4829140
+steam_build_id: 23942533
+game_version: 1.0.5
+engine: Godot
+engine_version: 4.6.3.stable.mono.official.7d41c59c4
+runtime: .NET 8 / Windows x64
+pck_version: 3
+source_directory: source_original/BOREWORKS_DEMO/steam_23942533
+extracted_directory: extracted_private/BOREWORKS_DEMO/steam_23942533
+working_directory: working_private/BOREWORKS_DEMO
+candidate_directory: build_candidate/BOREWORKS_DEMO/ko_v002
+target_directory: 'D:\steam\steamapps\common\Boreworks Demo'
+language: ko
+translation_slot: en
+patch_version: 1.0.0
+release_zip: release_output/BOREWORKS_DEMO_KOREAN_PATCH_1.0.0.zip
+report: validation/BOREWORKS_DEMO/ko_1.0.0/RESULT_REPORT.md
+qa:
+  save_directory_name: BoreQA
+  environment_redirected: [APPDATA, LOCALAPPDATA]
+  steam_disabled_in_qa_only: true
+  actual_process_path_required: true
+  viewport: [1280, 800]
+  registered_menus: 21
+  layout_cases: 282
+  visual_observations: 58
+  full_random_playthrough: NOT_RUN

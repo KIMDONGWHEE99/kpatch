@@ -1,0 +1,28 @@
+schema_version: 1
+template_only: false
+game:
+  game_id: MARCH_AND_CONQUER_DEMO
+  title: March and Conquer Demo
+  platform: Windows
+  store_app_id: 5203110
+  game_build: '25323013'
+  engine: Unity
+  engine_version: 6000.3.9f1
+  scripting_backend: Mono
+  asset_loading_system: serialized_assets
+baseline:
+  source_root: source_original/MARCH_AND_CONQUER_DEMO/steam_25323013
+  files_manifest: working_private/MARCH_AND_CONQUER_DEMO/baseline.json
+  file_count: 191
+  total_bytes: 217696576
+translation:
+  canonical_path: working_private/MARCH_AND_CONQUER_DEMO/translation.json
+  occurrence_inventory_path: extracted_private/MARCH_AND_CONQUER_DEMO/steam_25323013/strings.json
+  extraction_error_ledger_path: extracted_private/MARCH_AND_CONQUER_DEMO/steam_25323013/errors.json
+  media_review_path: working_private/MARCH_AND_CONQUER_DEMO/media_ledger.json
+  unicode_normalization: NFC
+runtime_qa:
+  isolation_preflight_status: PASS
+tracking:
+  current_gate: G8
+  result_report_path: validation/MARCH_AND_CONQUER_DEMO/ko_1.0.0/RESULT_REPORT.md

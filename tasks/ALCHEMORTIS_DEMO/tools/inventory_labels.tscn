@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://korean_patch/inventory_labels.gd" id="1"]
+[ext_resource type="FontFile" path="res://.godot/imported/fusion-pixel-10px-proportional-zh_hans.ttf-77a618bd36b1f6a3c405d1bc234c8999.fontdata" id="2"]
+
+[node name="KoreanInventoryLabels" type="Node2D"]
+visible = false
+script = ExtResource("1")
+
+[node name="InventoryBackground" type="ColorRect" parent="."]
+offset_left = 25.0
+offset_top = 42.0
+offset_right = 78.0
+offset_bottom = 53.0
+mouse_filter = 2
+color = Color(0.15294118, 0.09411765, 0.32941177, 1)
+
+[node name="InventoryText" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 42.0
+offset_right = 78.0
+offset_bottom = 53.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.964706, 0.858824, 0.729412, 1)
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 10
+text = "보관함"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SellBackground" type="ColorRect" parent="."]
+offset_left = 25.0
+offset_top = 273.0
+offset_right = 78.0
+offset_bottom = 285.0
+mouse_filter = 2
+color = Color(0.15294118, 0.09411765, 0.32941177, 1)
+
+[node name="SellText" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 274.0
+offset_right = 78.0
+offset_bottom = 285.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.964706, 0.858824, 0.729412, 1)
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 10
+text = "판매"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoemoji/NotoEmoji%5Bwght%5D.ttf",
+    "file": "C:\\Users\\PC\\Documents\\ChatGPT\\한글패치\\tasks\\HOW_EMPIRES_WORK\\third_party\\notoemoji\\NotoEmoji[wght].ttf",
+    "sha256": "de6c18832938afc99caf132b39d6a30a19bac7f2e812e28db2535b4608d27551",
+    "size": 1982596
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoemoji/OFL.txt",
+    "file": "C:\\Users\\PC\\Documents\\ChatGPT\\한글패치\\tasks\\HOW_EMPIRES_WORK\\third_party\\notoemoji\\OFL.txt",
+    "sha256": "500bb1ccf43df7bbb522112f9133a52b16e1c35e809632f5d8609b179152de5b",
+    "size": 4330
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssymbols2/NotoSansSymbols2-Regular.ttf",
+    "file": "C:\\Users\\PC\\Documents\\ChatGPT\\한글패치\\tasks\\HOW_EMPIRES_WORK\\third_party\\notosanssymbols2\\NotoSansSymbols2-Regular.ttf",
+    "sha256": "7d5fb73b7ca67a6798101741f5d280a3d016a56a197afcd4199dbb57b4b82a21",
+    "size": 1233128
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssymbols2/OFL.txt",
+    "file": "C:\\Users\\PC\\Documents\\ChatGPT\\한글패치\\tasks\\HOW_EMPIRES_WORK\\third_party\\notosanssymbols2\\OFL.txt",
+    "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+    "size": 4383
+  }
+]

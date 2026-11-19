@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "deny": [
+      "mcp__computer-use__*",
+      "PowerShell(*send_game_key*)",
+      "PowerShell(*click_game_window*)",
+      "PowerShell(*send_game_input*)",
+      "Bash(*send_game_key*)",
+      "Bash(*click_game_window*)",
+      "Bash(*send_game_input*)",
+      "Edit(//d/steam/**)",
+      "Edit(//c/Users/PC/Documents/ChatGPT/**)"
+    ],
+    "ask": [
+      "Edit(/source_original/**)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe",
+            "args": [
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-File",
+              "${CLAUDE_PROJECT_DIR}/.claude/hooks/disk_report.ps1"
+            ],
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+game_id: SPELLBOUND_SHELVED
+game_name: 'Spellbound & Shelved'
+steam_app_id: 5097840
+steam_build_id: 25274913
+platform: windows_x86_64
+engine: Godot
+engine_version: 4.7.1
+gdscript_bytecode: 101
+pck_version: 4
+source_directory: source_original/SPELLBOUND_SHELVED/steam_25274913
+extracted_directory: extracted_private/SPELLBOUND_SHELVED/steam_25274913
+working_directory: working_private/SPELLBOUND_SHELVED/update_25274913
+candidate_directory: build_candidate/SPELLBOUND_SHELVED/ko_1.0.1_c01
+target_directory: 'D:\steam\steamapps\common\Spellbound & Shelved'
+language: ko
+patch_version: 1.0.1
+release_zip: release_output/SPELLBOUND_SHELVED_KOREAN_PATCH_1.0.1.zip
+report: validation/SPELLBOUND_SHELVED/ko_1.0.1/RESULT_REPORT.md
+qa:
+  save_directory_name: SBS_KO_QA_25274913
+  steam_extension_enabled: false
+  baseline_compare_directory_name: SBS_KO_QA_25274913_BASELINE
+  required_surfaces: [menu, language, settings, gameplay, dialogue, help, upgrades, tooltip, achievements, developer_hud, finale, restart_confirmation, save, continue, quit_confirmation]
+  observed_current_build: [menu, korean_selection, settings, gameplay, dialogue, help, upgrades, shelf_tooltip, achievements, finale, save, continue, quit_confirmation]
+  additional_round_not_run: [developer_hud, restart_confirmation, english_roundtrip]
+  full_playthrough: NOT_RUN

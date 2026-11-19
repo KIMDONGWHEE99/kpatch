@@ -1,0 +1,116 @@
+{
+  "python": "3.10.11",
+  "godot_native": "4.6.3.stable.mono.official.7d41c59c4",
+  "gdre": "2.6.4 / Godot 4.8.dev.gh.8a459f517",
+  "ilspy": "9.1.0.7988",
+  "dotnet_sdk": "8.0.418",
+  "tools": [
+    {
+      "path": "tools\\gdre_2.6.4\\bin\\gdre_tools.exe",
+      "sha256": "88d6fbccfb7e5bacca7d248c5171fe66bbef15d78e0d7f6287c2f44e78aa9eaf",
+      "size": 91409408
+    },
+    {
+      "path": "tools\\gdre_2.6.4\\bin\\gdre_tools.pck",
+      "sha256": "3703ed2ebdfa1027a47cdaf181b53f4ee9164656b426017b06aa0f31b1401554",
+      "size": 6159276
+    },
+    {
+      "path": "working_private\\BOREWORKS_DEMO\\toolchain\\AssemblyPatch\\AssemblyPatch.dll",
+      "sha256": "2ebe3010aaa31137f0640f62b49f9aa4942960117c14f3bab1fbaeed1c81dd22",
+      "size": 23552
+    },
+    {
+      "path": "working_private\\BOREWORKS_DEMO\\toolchain\\AssemblyTool\\AssemblyTool.dll",
+      "sha256": "194e8af749070c6528b114e0f8491fbc60d22374c25a6a1552acbf4ed3504e1f",
+      "size": 36864
+    },
+    {
+      "path": "working_private\\BOREWORKS_DEMO\\toolchain\\AssemblyTool\\Mono.Cecil.dll",
+      "sha256": "831dca77470d85cb6ffbea3072daa7a3df5b7c9fcfd9c3f43674a9be99d4bfcf",
+      "size": 361472
+    },
+    {
+      "path": "C:\\Users\\PC\\.dotnet\\tools\\ilspycmd.exe",
+      "sha256": "21a969690d8024288a7d999f8e8697ba449da2f2be28b16e3d9276bfe03ee8c8",
+      "size": 152064
+    },
+    {
+      "path": "tasks\\TFC2\\third_party\\NotoSansKR\\NotoSansKR[wght].ttf",
+      "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "size": 10414588
+    },
+    {
+      "path": "release_output\\BOREWORKS_DEMO_KOREAN_PATCH_1.0.0\\tools\\xdelta3.exe",
+      "sha256": "53d90226615f217d3380c39892833311b4e24acd863e1ca01f14b5e772e2e6d0",
+      "size": 336896
+    },
+    {
+      "path": "source_original\\BOREWORKS_DEMO\\steam_23942533\\Boreworks.exe",
+      "sha256": "fbca583319d266116d9d201d1d27d00951618d9c8b4c748b2cd96d8ad9908f91",
+      "size": 104821248
+    }
+  ],
+  "sources": [
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/AssemblyPatch/AssemblyPatch.csproj",
+      "sha256": "e536fa48aa2eab8fb557d46376d8f74336bd3dbe638ac7eba46c6a27ef8e0cf9"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/AssemblyPatch/Program.cs",
+      "sha256": "8c88a654caa4c4d717d3131e0ca0a0ce4ce5df52d2b7ad3a914e4a2dbf40c846"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/audit_assets.py",
+      "sha256": "4acb567a87ff16aebe3c696b3e982ffaf85f37ca177cdc86fdd16b73c6822e3e"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/audit_sources.py",
+      "sha256": "ede2d23772e2a1cb15b5ee1c9f8ac91bc3b19157bc6c458cd3ac985039cb479e"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/collect_runtime.py",
+      "sha256": "a23d46cf8bac1878cd2ef0266fbc220453df773d6adce5f0dcdc3d0db8ce2136"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/common.py",
+      "sha256": "d138507295e0a7b605cae40387870c49cce558c905a9adc1490674909b50c90f"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/install_target.py",
+      "sha256": "058151fb072ab5a582435ad1923b31a547818bd988b934eba495bdcb136f75ac"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/launch_qa.py",
+      "sha256": "b2d9e29a44aa2af1e6293d72231fbc38b3e105d9083918dfbe26da51a17ed478"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/package_release.py",
+      "sha256": "5a86724c9fb12dce7490c42e8328160763a02b97cc64247fd5ab09b6c042225c"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/prepare_candidate.py",
+      "sha256": "deddf5aefa2723c92d3c66486ec5908294c6f99fefd2080db9254c9360612b0f"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/prepare_qa.py",
+      "sha256": "7389c8640fb1d0869e77503da377e8dc3962809552c219d4eb19ae982a22e159"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/test_installer.py",
+      "sha256": "93d98d4c9ef8d8aa84921b0fb3d534ba8cd0680b5c75fecfb9a9c1a4ca309572"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/test_installer_edges.py",
+      "sha256": "7d26728deb6632c1d0190e6277f055b8f92e11b703ebfd59dd71259d252430ef"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/verify_candidate.py",
+      "sha256": "ff10357efff78e998c046fe9a13e45f9bc644f06b0d60607bdd21cf9be702ab2"
+    },
+    {
+      "path": "tasks/BOREWORKS_DEMO/tools/write_reports.py",
+      "sha256": "46063ee4bf863605962762853fc9a184a178449c299f69dca4989d5796b6f698"
+    }
+  ]
+}

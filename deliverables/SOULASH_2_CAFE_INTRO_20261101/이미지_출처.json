@@ -1,0 +1,44 @@
+[
+  {
+    "file": "images/01_title.jpg",
+    "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399160/header.jpg?t=1793009799",
+    "bytes": 48013,
+    "sha256": "c44eab12334becdfc36bcccb783307a35bc4e336c22014e91889d9969bb7d178",
+    "credit": "Soulash 2 / Artur Smiarowski / Steam"
+  },
+  {
+    "file": "images/02_world_map.jpg",
+    "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399160/03d3a3dab3ea364a1666776c772264e643249530/ss_03d3a3dab3ea364a1666776c772264e643249530.1920x1080.jpg?t=1793009799",
+    "bytes": 919246,
+    "sha256": "ad3f5eab08e5c451d5bd93dd5e61888aeda8bce465f7ab6164b5e5ff71dfb712",
+    "credit": "Soulash 2 / Artur Smiarowski / Steam"
+  },
+  {
+    "file": "images/03_skills.jpg",
+    "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399160/970f0f7acbd4cecf9f04c53aa80d4095d88bdc62/ss_970f0f7acbd4cecf9f04c53aa80d4095d88bdc62.1920x1080.jpg?t=1793009799",
+    "bytes": 331260,
+    "sha256": "0a8dba88aaebf4a82c4f00af1586a1d5e69fe1a27155535fae4319b1f24ed6eb",
+    "credit": "Soulash 2 / Artur Smiarowski / Steam"
+  },
+  {
+    "file": "images/04_crafting.jpg",
+    "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399160/ss_b0905c7bdf3d8ce9f319d93e26ccb2b11437307c.1920x1080.jpg?t=1793009799",
+    "bytes": 367897,
+    "sha256": "1d54fb26a24020c9730f0ec42ed19f30619f77bdc0506e1a65b34d34e512abdd",
+    "credit": "Soulash 2 / Artur Smiarowski / Steam"
+  },
+  {
+    "file": "images/05_settlement.jpg",
+    "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399160/ss_3a5ac7d085c1433a059ba861684978ab105185e3.1920x1080.jpg?t=1793009799",
+    "bytes": 316640,
+    "sha256": "171e0235742c4027d39395efaa34a2f9b8aed250d68642fdac0165410e926f48",
+    "credit": "Soulash 2 / Artur Smiarowski / Steam"
+  },
+  {
+    "file": "images/06_combat.jpg",
+    "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399160/ss_391558c2833c5e137b96cb9113c5f1624fbccc0e.1920x1080.jpg?t=1793009799",
+    "bytes": 354689,
+    "sha256": "a7c3339e95c954e80c25984e406b5c987a82ea2ae9b2c3cd76d5e841b3a81821",
+    "credit": "Soulash 2 / Artur Smiarowski / Steam"
+  }
+]

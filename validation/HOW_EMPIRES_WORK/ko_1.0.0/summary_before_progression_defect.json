@@ -1,0 +1,31 @@
+{
+  "game": "HOW_EMPIRES_WORK",
+  "build": "26482667",
+  "patch_version": "1.0.0_r2",
+  "candidate": "full_04",
+  "gates": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS",
+    "G8": "PASS"
+  },
+  "candidate_sha256": "8c1ebef91ec3b0053a254660dbe2d8b0688547c944c59fec05ee973dbf436780",
+  "zip_sha256": "c55677ebed3d90a39d9a027eae09999e06ffd183679e701bdb3ca436429d2565",
+  "reviewed_captures": 33,
+  "installer_tests_pass": 38,
+  "installer_tests_not_applicable": 3,
+  "unknown": 0,
+  "unresolved_extraction_errors": 0,
+  "missing_glyph_warnings": 0,
+  "candidate_specific_loading_errors": 0,
+  "user_saves_unchanged": true,
+  "actual_installation": "PASS",
+  "full_playthrough": "NOT_RUN",
+  "post_install_steam_launch": "NOT_RUN",
+  "publication": "NOT_REQUESTED"
+}

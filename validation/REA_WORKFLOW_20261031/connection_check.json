@@ -1,0 +1,42 @@
+{
+  "checked_date": "2026-10-31",
+  "timezone": "Asia/Seoul",
+  "scope": "현재 대화의 연결된 REA MCP 읽기 전용 상태 조회",
+  "operation": "mcp__rea__binary_session",
+  "arguments": {},
+  "transport_call": "PASS",
+  "open": false,
+  "cleanup_pending": false,
+  "analysis_run": null,
+  "package_version": "6.8.0",
+  "providers": [
+    {
+      "id": "ghidra",
+      "status": "unavailable",
+      "code": "not_configured",
+      "reason": "Set GHIDRA_INSTALL_DIR to an extracted Ghidra 12.1.x release directory."
+    },
+    {
+      "id": "hopper",
+      "status": "unavailable",
+      "code": "unsupported_host",
+      "reason": "Hopper integration is not supported on win32."
+    },
+    {
+      "id": "ida",
+      "status": "unavailable",
+      "code": "not_configured",
+      "reason": "REA configuration is invalid: Set REA_IDA_MCP_CONFIG to an upstream IDA MCP JSON registration; see docs/ida-provider.md."
+    },
+    {
+      "id": "kuna",
+      "status": "unavailable",
+      "code": "not_configured",
+      "reason": "Set REA_KUNA_COMMAND to the absolute path of a caller-supplied kuna executable (verified with 1.833). REA does not download, install or update Kuna."
+    }
+  ],
+  "game_execution": "NOT_RUN",
+  "native_decompilation": "NOT_RUN",
+  "configuration_mutation": "NOT_RUN",
+  "interpretation": "대화에서 REA 직접 호출 가능. Ghidra 경로가 연결된 서버에 전달되지 않아 네이티브 심층 분석 준비는 미완료."
+}

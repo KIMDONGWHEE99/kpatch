@@ -1,0 +1,33 @@
+schema_version: 1
+template_only: false
+game:
+  game_id: SEVENDAYS_VANILLAPLUS
+  title: "7 Days to Die / Vanilla Plus"
+  platform: Windows / Steam
+  store_app_id: 251570
+  game_build: '24994517'
+  mod_version: '1.6.0'
+  engine: Unity
+  scripting_backend: Mono
+  engine_version: null
+  asset_loading_system: Addressables
+task:
+  task_id: SEVENDAYS-VANILLAPLUS-KO-001
+  spec_path: tasks/SEVENDAYS_VANILLAPLUS/TASK_SPEC.md
+  user_request_scope: "번역본 제작. 실제 플레이 테스트는 사용자가 직접 수행."
+  supported_languages: [koreana]
+baseline:
+  baseline_id: VANILLAPLUS_1.6.0_0ecd9323c633
+  source_root: source_original/SEVENDAYS_VANILLAPLUS/1.6.0
+  files_manifest: source_original/SEVENDAYS_VANILLAPLUS/1.6.0/manifest.json
+  file_count: 19
+translation:
+  canonical_path: working_private/SEVENDAYS_VANILLAPLUS/ko_0.1.0/canonical_translation.json
+candidate:
+  build_id: ko_0.1.0
+  root: build_candidate/SEVENDAYS_VANILLAPLUS/ko_0.1.0
+runtime_qa:
+  status: NOT_RUN
+  reason: "현재 사용자가 실제 플레이 테스트를 직접 수행하도록 요청함."
+release:
+  publication_scope_from_user: "로컬 번역본 제공만 허용. 공개 업로드 요청 없음."

@@ -1,0 +1,24 @@
+game_id: THE_LOOPLER
+game_name: The Loopler
+steam_app_id: 4150860
+steam_build_id: 25262314
+engine: Unity
+engine_version: 6000.3.16f1
+runtime: IL2CPP / Windows x64
+metadata_version: 39
+addressables_version: 2.9.1
+source_directory: source_original/THE_LOOPLER/steam_25262314/game
+extracted_directory: extracted_private/THE_LOOPLER/steam_25262314
+working_directory: working_private/THE_LOOPLER
+candidate_directory: build_candidate/THE_LOOPLER/ko_1.0.0_c04/game
+target_directory: 'D:\steam\steamapps\common\The Loopler'
+language: ko
+translation_slot: ko
+patch_version: 1.0.0
+qa:
+  product_name: LooplerKQA5
+  persistent_data_path: working_private/THE_LOOPLER/qa_c04/game/The Loopler_Data
+  steam_disabled_in_qa_only: true
+  analytics_disabled_in_qa_only: true
+  actual_process_path_required: true
+  full_random_playthrough: NOT_RUN

@@ -1,0 +1,33 @@
+schema_version: 1
+template_only: false
+game:
+  game_id: HOW_EMPIRES_WORK
+  title: How Empires Work
+  platform: Windows x64
+  store_app_id: 4663730
+  game_build: 26482667
+  engine: Godot
+  engine_version: 4.7.stable.official.5b4e0cb0f
+  scripting_backend: GDScript_bytecode_101
+  asset_loading_system: PCK
+  asset_loading_version: 4
+baseline:
+  baseline_id: steam_26482667
+  source_root: source_original/HOW_EMPIRES_WORK/steam_26482667
+  files_manifest: working_private/HOW_EMPIRES_WORK/baseline.json
+  file_count: 4
+  total_bytes: 1001990092
+task:
+  spec_path: tasks/HOW_EMPIRES_WORK/TASK_SPEC.md
+  user_request_scope: 개인용 한국어 패치 제작·검증·지정 설치본 적용
+  publication_scope: 공개 업로드 요청 없음
+runtime_qa:
+  isolation_preflight_status: PASS
+  graphics_device: D3D12_ForwardPlus_NVIDIA_RTX_4060_Ti
+  representative_screen_count: 33
+  full_playthrough_status: NOT_RUN
+tracking:
+  current_gate: G8_PASS
+  candidate: full_04
+  release: 1.0.0_r2
+  unresolved_issue_ids: []

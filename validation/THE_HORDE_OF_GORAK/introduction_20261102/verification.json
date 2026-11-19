@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-02",
+  "commit": "c588bb2302dd6f64b11742b5128c3967e1ab60b4",
+  "article_url": "https://github.com/KIMDONGWHEE99/korean-game-patches/blob/main/games/the-horde-of-gorak/INTRODUCTION.md",
+  "uploaded_files": 8,
+  "image_files": 6,
+  "remote_hashes": "PASS",
+  "unrelated_files_preserved": 6,
+  "github_images_loaded": 6,
+  "github_render": "PASS",
+  "local_html_visual_check": "NOT_RUN",
+  "game_runtime_qa": "NOT_RUN",
+  "patch_zip_modified": false
+}

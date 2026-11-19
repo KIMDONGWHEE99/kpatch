@@ -1,0 +1,151 @@
+"""비공개 원문을 복사하지 않고 출처·범위의 공개 요약만 작성합니다."""
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
+from common import ROOT, WORK, EXTRACT, sha
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def main():
+    resolution_path = WORK / "audit/source_resolution_rc5.json"
+    coverage_path = WORK / "audit/runtime_translation_coverage.json"
+    resolution = read(resolution_path)
+    coverage = read(coverage_path)
+    static_path = WORK / "1.0.0_rc5/static_validation.json"
+    static = read(static_path)
+    visual_path = WORK / "audit/visual_rc5_final.json"
+    visual = read(visual_path)
+    font_path = ROOT / visual["fonts"]["path"]
+    assert sha(font_path) == visual["fonts"]["sha256"]
+    font = read(font_path)
+    assert resolution["status"] == static["status"] == font["status"] == "PASS"
+    assert coverage["denominator"]["total_locations"] == 1716
+    current_inputs = {Path(r["path"]).resolve(): r["sha256"] for r in coverage["current_translation_inputs"]}
+    for path, expected in current_inputs.items():
+        assert sha(path) == expected
+    for record in coverage["review_report_inputs"]:
+        assert sha(record["path"]) == record["sha256"]
+    c = coverage["counts"]
+    source = resolution["classification"]
+    media = source["media"]
+    refs = [
+        ("원본 고정 목록", EXTRACT / "baseline.json"),
+        ("현재 출처 해결", resolution_path),
+        ("현재 출처 합계", WORK / "audit/source_summary_rc5.json"),
+        ("현재 미디어 합계", WORK / "audit/media_summary_rc5.json"),
+        ("미디어 재분류 이력", WORK / "audit/media_reclassification_icons32.json"),
+        ("추가 아이콘 준비", WORK / "audit/media_resolution_icons32.json"),
+        ("생성 이름 분류", WORK / "audit/name_classification.json"),
+        ("현재 정적 검사", static_path),
+        ("필요 문자 목록", WORK / "translation/required_characters.json"),
+        ("준비한 한글 글꼴", WORK / "fonts/NotoSansKR-Regular.ttf"),
+        ("글꼴 라이선스", ROOT / "tasks/TFC2/third_party/NotoSansKR/OFL.txt"),
+        ("실행 글꼴 검사", font_path),
+        ("rc5 수정 화면 판독", visual_path),
+        ("번역 위치 관찰 범위", coverage_path),
+        ("미관찰 위치 목록", WORK / "audit/runtime_translation_coverage_not_observed.json"),
+        ("대표 화면 계획·제외 근거", WORK / "audit/runtime_plan.json"),
+    ]
+    extra = WORK / "audit/visual_rc5_extra.json"
+    if extra.exists():
+        refs.append(("rc5 추가 화면 판독", extra))
+    evidence_rows = "\n".join(
+        f"| {label} | `{path.relative_to(ROOT).as_posix()}` | `{sha(path)}` |"
+        for label, path in refs
+    )
+    pass_table = c["observed_by_kind"].get("table", 0)
+    pass_added = c["observed_by_kind"].get("added", 0)
+    pass_direct = c["observed_by_kind"].get("direct", 0)
+    text = f"""# Kingdom Inc. Demo 한글패치 — 출처와 검증 범위
+
+이 문서는 Steam 빌드 **25631786**, 후보 **1.0.0_rc5**의 조사 범위와 근거를 공개 검토용으로 요약합니다. 원문·게임 자산·실제 저장 내용은 포함하지 않습니다. 전체 G5 통과, 전체 회차 검증 또는 설치 완료를 선언하는 문서가 아닙니다.
+
+작성 기준: {datetime.now(timezone.utc).isoformat()}  
+검사 상태는 `PASS`(해당 검사 통과), `FAIL`(결함 또는 불충분), `NOT_RUN`(미확인), `STALE`(입력 변경으로 과거 근거가 현재에 적용되지 않음), `NOT_APPLICABLE`(기능 부재 등의 근거로 해당 없음)로 구분합니다.
+
+## 출처 조사
+
+원본은 Unity **6000.3.2f1 / Mono** 구조이며, 원본 파일 191개의 위치·크기·SHA-256(파일 내용 식별값)을 고정했습니다. 실제 설치 폴더 대신 별도 원본 사본에서 조사·후보 제작을 진행했습니다.
+
+| 조사 대상 | 위치 수 | 현재 분류 |
+| --- | ---: | --- |
+| 자산 문자열 | 29,399 | 내부값 29,137 / 표시 번역 155 / 표시 유지 107 |
+| 게임 로직 DLL의 문자열 | 3,136 | 내부값 2,624 / 표시 번역 4 / 표시 유지 508 |
+| 텍스처·스프라이트(이미지와 그 안의 조각) | 1,021 | 글자 없음 779 / 유지 238 / 번역 4 |
+
+자산의 표시 번역 155곳은 직접 필드 154곳과 번역표 전체를 담은 자산 1곳입니다. 번역표의 원래 항목 1,556개, 원본에 없던 보완 키 6개, 직접 필드 154곳을 합친 **문자열 대조 분모는 1,716곳**입니다. 코드 문구 4곳과 이미지 위치 4곳은 별도 검사 대상으로, 이 분모에 중복해서 더하지 않습니다.
+
+위 조사 목록 안에서 미분류, 근거 없는 유지·제외, 미해결 추출 오류는 각각 **0건**입니다. 초기 추출 오류 5건은 재해석과 빈 동적 글꼴 텍스처 확인으로 해결했습니다. 원본 누락 키 6건의 과거 `FAIL` 기록은 보존하고, 후보에서 기대값과 일치한 해결 기록을 따로 연결했습니다.
+
+게임 로직 코드의 전수 문자열 범위는 `Assembly-CSharp.dll`입니다. Unity·.NET·Steamworks 등 공용 라이브러리 142개 전체의 모든 문자열 추출은 **`NOT_RUN`**입니다. 따라서 위의 미분류 0건을 모든 DLL 전체에 대한 주장으로 확대하지 않습니다.
+
+## 이미지와 유지한 표기
+
+텍스처 192개와 스프라이트 829개를 출처·부모 이미지·픽셀 해시로 연결했습니다. 논리적인 이미지 **2종**, 자산 위치 **4곳**을 한글 표식으로 교체했습니다. 실제 화면 검수에서 기존 번역 대상과 다른 작은 글상자 아이콘을 추가 발견하여, 과거 유지 판정과 미해결 전환 기록을 보존한 뒤 번역 대상으로 해결했습니다.
+
+작은 아이콘은 앞서 생성·검수한 한글 표식의 16×16픽셀 영역을 그대로 사용했습니다. 후보에서 다시 추출한 픽셀이 기대값과 일치하며, 해당 셀 밖 65,280픽셀과 스프라이트 참조·메타데이터는 원본과 같습니다. 변경 전 rc4 화면의 `FAIL`을 덮어쓰지 않고 rc5 재검수에 연결했습니다. 원본 자산 객체 목록에서 `VideoClip`은 0개였습니다.
+
+다음 표기는 근거를 남기고 유지했습니다.
+
+- 게임·제작사 로고와 고유 브랜드명, 제작자 서명
+- 문화별 조각을 조합하고 철자를 정리하는 원본 생성 인명
+- 키보드·마우스의 물리 입력 식별 표시
+- 실제 자동저장 파일명, 큰 수의 단위 기호, 숫자·좌표·색상 채널
+- 정보·경고 등의 의미 기호와 글꼴 문자판
+
+생성 인명 유지는 이름 조합 방식과 표기 관례에 따른 판단입니다. 이름 문자열 자체가 저장 키이므로 번역할 수 없다는 설명은 하지 않습니다. 장치 조작을 설명하는 문장과 일반 안내문은 유지 대상에 포함하지 않습니다.
+
+## 글꼴
+
+Noto Sans KR에서 고정 굵기 글꼴을 준비하여 실제 사용 글꼴 연결에 적용했습니다. 해당 글꼴은 SIL Open Font License 1.1에 따라 사용하며, 글꼴 파일·라이선스의 별도 배포 허용 범위는 패키지 명세에서 관리합니다.
+
+- 정적 검사: 글꼴 관련 10개 객체, 원본 글꼴 연결 3개, TMP 글꼴 4개, 소비 위치 407곳, 설정 1곳을 검사했고 누락 문자는 0개였습니다.
+- 필요 문자: 번역 전체에서 계산한 **828개**를 사용했습니다.
+- 실제 실행 글꼴 검사: 지정된 4개 글꼴에서 828개 문자의 생성·표시 지원을 검사해 `PASS`를 기록했습니다.
+
+문자 생성 검사 통과는 모든 번역 문장을 모든 화면 크기에서 읽었다는 뜻이 아닙니다. 실제 화면의 잘림·겹침과 개별 문장 가독성은 화면 판독 기록에서 별도로 다룹니다.
+
+## 실제 화면과 번역 위치의 연결
+
+현재 관찰 보고서는 제작자가 실제로 열어 판독한 PNG **{c["reviewed_image_files"]}장**을 연결합니다. 그중 행별 `PASS` 판정이 있는 **{c["pass_image_files_eligible"]}장**의 활성·화면 내 문구를 계수 대상으로 삼았습니다.
+
+| 범위 | 현재 결과 |
+| --- | ---: |
+| 번역 위치 전체 분모 | 1,716 |
+| 전체 표시값이 정확히 일치하고 위치를 연결한 곳 | {c["exact_linked_translation_locations"]} ({c["exact_location_percentage"]:.2f}%) |
+| 위 연결의 구성 | 원래 표 {pass_table} / 보완 키 {pass_added} / 직접 필드 {pass_direct} |
+| 아직 연결하지 못한 위치 | {c["not_observed_translation_locations"]} |
+| 같은 표시값의 여러 출처 등으로 계수하지 않은 발생 | {c["ambiguous_occurrences_not_counted"]}회 |
+
+비교는 문자열 전체의 정확한 일치 또는 허용된 표시 태그·강조·제어 줄바꿈만 제거한 전체 일치로 제한했습니다. 부분 문자열, 단어 포함 여부, 숫자 대입 추정으로 통과시키지 않았습니다. 같은 번역이 여러 위치에 있으면 정확한 화면 객체 경로로 출처를 특정할 수 있을 때만 위치 수에 넣었습니다.
+
+미관찰 **{c["not_observed_translation_locations"]}곳은 `NOT_RUN / 정적 PASS`**로 남아 있습니다. 실제 숫자가 삽입된 문장이나 여러 키의 조합은 화면에 등장해도 엄격한 위치 연결에서 미계수될 수 있습니다. 반대로 활성·화면 내 좌표만으로 다른 패널 뒤의 가림을 모두 알 수는 없으므로, 이 수치는 개별 문장의 모든 글리프를 육안 확인했다는 비율도 아닙니다.
+
+대표 화면군의 합격, 런타임에서 일치 문구가 발생한 번역 위치 수, 전체 문자열의 실화면 관찰은 서로 다른 지표입니다. 미관찰 위치를 임의로 내부값이나 미구현 화면으로 재분류하지 않았습니다. 전체 회차·모든 분기는 이 검수에서 **`NOT_RUN`**입니다.
+
+데모에서 구현·등록되지 않은 농장·던전 전용 화면, 후반 인물 및 일부 재화 해금, 자산 참조가 없는 환전 창은 코드·자산 참조 근거로 `NOT_APPLICABLE` 범위를 명시했습니다. 남아 있는 관련 설명 문구는 번역표 정적 대조 대상에 포함합니다.
+
+## 상세 근거 식별
+
+아래는 작업 루트 기준 비공개 자료의 경로와 SHA-256입니다. 해당 자료·게임 자산·원문·저장 내용은 이 공개 요약에 복사하지 않았으며 일반 배포 패키지에도 이 표만으로 포함하도록 허용하지 않습니다. 원래 출처 요약과 rc4 실패 기록을 보존하고 현재 해결표를 추가하는 방식입니다.
+
+| 근거 | 비공개 경로 | SHA-256 |
+| --- | --- | --- |
+{evidence_rows}
+
+이 문서의 `PASS`는 각 열에 적힌 조사·대조·글꼴 검사 범위에만 적용합니다. 설치 결과와 최종 배포 판정은 별도 보고서에서 다룹니다.
+"""
+    output = ROOT / "validation/KINGDOM_INC_DEMO/ko_1.0.0/SOURCE_AND_SCOPE.md"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(text, encoding="utf-8")
+    print(json.dumps({"path": str(output), "sha256": sha(output), "characters": len(text),
+                      "coverage_images": c["reviewed_image_files"],
+                      "coverage_locations": c["exact_linked_translation_locations"]}, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()
