@@ -2,6 +2,7 @@
 
 2026-11-19에 Steam 빌드 26701014용 패치를 `D:\steam\steamapps\common\Clicky Islands`에 **설치했습니다**(G0~G8 통과 뒤 사용자 지시로 적용). 설치된 4개 파일은 검증한 후보 `ko_c03`과 해시가 같고, 사용자 저장은 설치 전후 동일합니다. 설치 뒤 Steam으로 실행해 보는 확인은 하지 않았습니다.
 
+- [GitHub 공개 저장소](https://github.com/KIMDONGWHEE99/clicky-islands-korean-patch) · [릴리스 다운로드](https://github.com/KIMDONGWHEE99/clicky-islands-korean-patch/releases/tag/v1.0.0-r1)
 - [최종 설치 묶음](../../release_output/CLICKY_ISLANDS_KOREAN_PATCH_1.0.0_r1.zip) (약 8MB, SHA-256 `baf36898ebc314a6a1ab7cfc84bd6eb995f46a6697c11cdbe4ba6064f4962907`)
 - 설치: [Install.cmd](../../release_output/CLICKY_ISLANDS_KOREAN_PATCH_1.0.0_r1/Install.cmd) · 제거: [Remove.cmd](../../release_output/CLICKY_ISLANDS_KOREAN_PATCH_1.0.0_r1/Remove.cmd)
 - [결과 보고](../../validation/CLICKY_ISLANDS/ko_1.0.0/RESULT_REPORT.md)

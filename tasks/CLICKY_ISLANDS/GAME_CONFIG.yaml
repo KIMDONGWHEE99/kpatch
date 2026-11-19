@@ -90,7 +90,7 @@ release:
   archive_sha256: baf36898ebc314a6a1ab7cfc84bd6eb995f46a6697c11cdbe4ba6064f4962907
   final_zip_test_evidence_path: working_private/CLICKY_ISLANDS/package_1.0.0_r1/installer_tests.json
   external_final_report_path: validation/CLICKY_ISLANDS/ko_1.0.0/RESULT_REPORT.md
-  publication_scope_from_user: "공개 요청 없음(개인용)"
+  publication_scope_from_user: "2026-11-19 사용자 요청으로 GitHub 공개 (https://github.com/KIMDONGWHEE99/clicky-islands-korean-patch, 릴리스 v1.0.0-r1)"
   actual_installation: "PASS (2026-11-19, working_private/CLICKY_ISLANDS/install_1.0.0_r1/install.json). 설치 후 Steam 실행은 NOT_RUN"
 
 tracking:

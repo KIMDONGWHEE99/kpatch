@@ -371,3 +371,19 @@ Steam 빌드 25850896·Godot 4.6.2 원본 192파일을 고정한 별도 사본�
 - 재실행 시 영향: 지운 후보와 검수 사본은 `build.py`·`prepare_qa.py`로 다시 만들 수 있으나 PCK 해시는 실행마다 달라질 수 있다. 설치 시험의 "지원하지 않는 이전 후보 거부" 사례는 `ko_c01`의 PCK를 썼으므로 다시 돌리려면 다른 미지원 PCK가 필요하다.
 - 남은 사본: `source_original/CLICKY_ISLANDS` 248MB, `extracted_private/CLICKY_ISLANDS` 481MB, `build_candidate/CLICKY_ISLANDS/ko_c03` 256MB. 원본 사본은 게임 업데이트 뒤에는 다시 구할 수 없어 지우지 않았다.
 - 기록: `working_private/CLICKY_ISLANDS/cleanup_20261119_plan.json`.
+
+## 2026-11-19 GitHub 공개: kpatch 공개 사본과 Clicky Islands 전용 저장소 (Claude)
+
+사용자 요청("kpatch 프로젝트도 깃허브에 올려주고 클리키 아일랜드도 깃허브에 따로 저장해줘")으로 진행했다. 공개 범위는 물어서 정했다: kpatch는 공개(올리기 전 점검·정리), Clicky Islands는 공개 저장소와 릴리스 ZIP.
+
+- 사전 확인: `gh` 명령은 없다. 저장된 GitHub 로그인(자격 증명 관리자)은 `KIMDONGWHEE99` 계정이며 이전 게임 공개에 쓰던 것과 같다. 토큰 값은 출력하거나 파일에 남기지 않았다.
+- 로컬 커밋: `2997d95`(Clicky Islands 도구·명세·결과 보고 42개 파일. 작업 폴더에 있던 `.gitignore`의 `.pck`·`.assets`·`.xdelta` 규칙 변경 포함), `5e19797`·`12074d4`(공개 사본 도구).
+- kpatch 점검(`tools/public_audit.py`): 추적 파일에서 토큰·Steam 계정 번호 0건, 이메일은 글꼴 라이선스의 제작자 주소 1건뿐. 문제로 본 것은 두 가지다. (1) 기존 커밋 작성자가 개인 Gmail 주소다. (2) `tasks/{SUPERREAP_DEMO,PIBCREMENTAL_DEMO,TFC2}/translations`의 33개 파일과 번역표가 든 도구 16개에 게임 원문·번역문이 들어 있다.
+- 처리: 작업 저장소를 그대로 push하지 않고 `tools/publish_project.py`로 걸러 낸 사본을 올렸다. 993개 포함, 49개 제외, 사본 안내 `PUBLIC_EXPORT.md` 추가. 작성자는 GitHub 비공개 주소(noreply). 올린 뒤 원격의 파일 목록 994개와 커밋이 사본과 같은지 확인했다.
+  - 저장소: https://github.com/KIMDONGWHEE99/kpatch (공개, 첫 커밋 `de8641b`)
+  - 작업 저장소에는 여전히 원격이 없다. 프로젝트 규칙("이 저장소는 push하지 않는다")은 "공개 사본은 도구로만 올린다"로 고쳤다(`docs/CLAUDE_CODE_SETUP.md` 8절).
+- Clicky Islands 전용 저장소: `HOW_EMPIRES_WORK`의 공개 도구를 고쳐 `tasks/CLICKY_ISLANDS/prepare_github.py`, `publish_github.py`를 만들었다. 안내문·변경 이력·검증 요약·설치기 소스·라이선스 15개 파일을 올리고, 검증된 ZIP(`baf36898…f4962907`)을 다시 만들지 않고 그대로 릴리스 `v1.0.0-r1`에 첨부했다.
+  - 저장소: https://github.com/KIMDONGWHEE99/clicky-islands-korean-patch (공개, 커밋 `3d632e7`)
+  - 확인: 로그인 없이 저장소·릴리스가 보이고, 릴리스의 ZIP을 다시 내려받은 해시가 같다.
+  - 시행착오: 도구의 마지막 확인이 실패로 끝났다. 초안 상태에서 받은 첨부 주소가 공개 뒤 바뀌어 404가 났기 때문이다. 공개된 릴리스에서 주소를 다시 읽어 확인했고 도구도 고쳤다. 공개 자체는 정상이었다.
+- 확인하지 않은 것: 제외 규칙이 놓친 소량의 게임 문구(분류용 예시 문자열 등)가 공개 사본의 도구에 남아 있을 수 있다. 파일을 하나씩 읽어 검토한 것이 아니라 규칙으로 걸렀다. GitHub 웹 화면에서 한글 파일 이름·안내문이 어떻게 보이는지도 직접 보지 않았다.

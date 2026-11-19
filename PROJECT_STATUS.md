@@ -1,6 +1,6 @@
 # 프로젝트 현재 상태
 
-갱신: 2026-11-19
+갱신: 2026-11-20
 
 이 문서는 지금 상태만 담습니다. 날짜별 경과는 [WORK_LOG.md](WORK_LOG.md)에, 2026-11-16까지의 상태 문서 전문은 [docs/history/PROJECT_STATUS_until_2026-11-16.md](docs/history/PROJECT_STATUS_until_2026-11-16.md)에 있습니다.
 
@@ -16,7 +16,7 @@
 
 | 게임 | 최신판 · 지원 빌드 | 설치·공개 | 판정과 확인 범위 | 미검증·제한 | 번역 원본 | 근거 |
 |---|---|---|---|---|---|---|
-| Clicky Islands | 1.0.0 r1 · Steam 26701014 | 설치본 적용, 미공개 | G0~G8 PASS. 칸 1,078·직접 문구 46 독립 대조, 실제 실행 4회로 필수 화면군 7종의 대표 화면 확인, 최종 ZIP 설치·복구 41건(PASS 38, 해당 없음 3), 설치 후 파일 해시·저장 무변경 확인 | 설치 후 Steam 실행, 시장·가마솥·화산 등 미도달 화면, 전체 회차. 튜토리얼 시연 영상 12종은 영어 화면 그대로 | `working_private/CLICKY_ISLANDS/translation` | [결과 보고](validation/CLICKY_ISLANDS/ko_1.0.0/RESULT_REPORT.md) · [안내](tasks/CLICKY_ISLANDS/README.md) |
+| Clicky Islands | 1.0.0 r1 · Steam 26701014 | 설치본 적용, GitHub 공개 | G0~G8 PASS. 칸 1,078·직접 문구 46 독립 대조, 실제 실행 4회로 필수 화면군 7종의 대표 화면 확인, 최종 ZIP 설치·복구 41건(PASS 38, 해당 없음 3), 설치 후 파일 해시·저장 무변경 확인 | 설치 후 Steam 실행, 시장·가마솥·화산 등 미도달 화면, 전체 회차. 튜토리얼 시연 영상 12종은 영어 화면 그대로 | `working_private/CLICKY_ISLANDS/translation` | [GitHub](https://github.com/KIMDONGWHEE99/clicky-islands-korean-patch) · [결과 보고](validation/CLICKY_ISLANDS/ko_1.0.0/RESULT_REPORT.md) · [안내](tasks/CLICKY_ISLANDS/README.md) |
 | How Empires Work | 1.0.1 r2 · Steam 26482667 | 설치본 적용, GitHub 공개 | 수정본 `full_06`이 위치·키·실행·설치·저장 복구 검사를 통과. 1.0.0의 G2~G5는 FAIL로 정정 | 전체 완주, 설치 후 Steam 추가 실행 | `working_private/HOW_EMPIRES_WORK/translation` | [결과 보고](validation/HOW_EMPIRES_WORK/ko_1.0.1/RESULT_REPORT.md) · [안내](tasks/HOW_EMPIRES_WORK/README.md) |
 | The Horde of Gorak | 1.0.1 r1 · Steam 26365992 (게임 v1.1.04) | 설치본 적용, GitHub 공개 | 정적 12,080개 검사, 정역 복원 24개, 최종 ZIP 설치·복구 48개 판정 통과. 전체 검수 통과판 아님 | 신규 상점 실화면, 엔딩, 전체 분기, 설치 후 추가 실행. 일부 영문 진단 문구 남음 | 전용 파일 없음 | [결과 보고](validation/THE_HORDE_OF_GORAK/ko_1.0.1/RESULT_REPORT.md) · [안내](tasks/THE_HORDE_OF_GORAK/README.md) |
 | Cobalt Miner | 1.0.0 r1 · Steam 24347666 | 설치본 적용(개인용), GitHub 공개 | G2·G5는 FAIL로 보존. G0~G8 전체 통과판 아님 | 엔진 문구 1,237개의 표시 여부, 전체 시설·분기. B검수 종료 오류 원인 미확정 | 일부 (`tasks/COBALT_MINER/translate_cobalt.py`) | [결과 보고](validation/COBALT_MINER/ko_1.0.0/RESULT_REPORT.md) · [안내](tasks/COBALT_MINER/README.md) |
@@ -64,7 +64,7 @@
 | 코드 검토·격리 재현 | 수행 기록 있음 | [평가 보고서](docs/PROJECT_REVIEW_2026-09-05.md). 재현 결과 파일은 2026-10-07에 삭제됨 |
 | 검증 허점·설치 복구·공통 실행기 | 미완료 | [PROC-01~08](docs/PROCESS_IMPROVEMENT_BACKLOG.md) |
 | 설치 시험의 사본 삭제, 검수 코드 공통화, 번역 원문 복구 | 미완료. 규칙만 문서에 반영 | [PROC-10~12](docs/PROCESS_IMPROVEMENT_BACKLOG.md) |
-| Git | 2026-11-19에 저장소 생성. 첫 커밋 `50dffc6`(1,002개 파일, 22.2MiB). 원격 저장소 없음 | [설정 안내](docs/CLAUDE_CODE_SETUP.md) 8절의 "그 뒤의 규칙". 의미 있는 작업 단위마다 커밋하고 push하지 않음 |
+| Git | 2026-11-19에 저장소 생성. 작업 저장소에는 원격이 없고 push하지 않음. 2026-11-19부터 걸러 낸 공개 사본을 [KIMDONGWHEE99/kpatch](https://github.com/KIMDONGWHEE99/kpatch)에 올림(번역 원본 폴더와 번역표가 든 도구 제외, 작성자는 GitHub 비공개 주소) | [설정 안내](docs/CLAUDE_CODE_SETUP.md) 8절의 "그 뒤의 규칙". 의미 있는 작업 단위마다 로컬에 커밋하고, 공개 사본은 `tools/publish_project.py --publish`로 갱신 |
 
 ## 다음 작업
 
